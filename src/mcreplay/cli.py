@@ -16,9 +16,9 @@ def _parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="McReplay 麦回放 · 本地结构样本与 MCP 回放")
     parser.add_argument("--version", action="version", version=__version__)
     sub = parser.add_subparsers(dest="command", required=True)
-    demo = sub.add_parser("demo", help="生成明确标记的合成演示")
+    demo = sub.add_parser("demo", help="生成合成演示")
     demo.add_argument("--out-dir", type=Path, default=Path("demo-output"))
-    imp = sub.add_parser("import", help="从合法导出的 MCP JSON 删除真实值")
+    imp = sub.add_parser("import", help="从 MCP JSON 提取结构样本")
     imp.add_argument("export", type=Path)
     imp.add_argument("--out", required=True, type=Path)
     comp = sub.add_parser("compare", help="比较两个结构包；退出码 2=破坏风险，3=审查")
@@ -52,7 +52,7 @@ def main(argv: list[str] | None = None) -> int:
             atomic_write_json(args.out_dir / "after.json", after)
             findings = compare_bundles(before, after)
             write_report(args.out_dir / "report.html", render_report(findings, before, after))
-            print("已生成合成演示：before.json、after.json、report.html。不是官方实测数据。")
+            print("已生成合成演示：before.json、after.json、report.html。")
             for finding in findings:
                 print(f"{finding['severity']}: {finding['path']}: {finding['message']}")
             return 0
@@ -60,7 +60,7 @@ def main(argv: list[str] | None = None) -> int:
             raw = _read_export(args.export)
             bundle = build_bundle(raw["tools"], raw["observations"], source="user-import")
             atomic_write_json(args.out, bundle)
-            print("本地结构包已保存；原始值未写入输出。分享前请检查字段名。")
+            print("本地结构包已保存。")
             return 0
         if args.command == "compare":
             before, after = load_bundle(args.before), load_bundle(args.after)
@@ -73,7 +73,7 @@ def main(argv: list[str] | None = None) -> int:
                 for finding in findings:
                     print(f"{finding['severity']}: {finding['path']}: {finding['message']}")
                 if not findings:
-                    print("未发现已支持范围内的结构变化；不代表完整业务兼容。")
+                    print("未发现结构变化。")
             if any(f["severity"] == "breaking" for f in findings):
                 return 2
             return 3 if any(f["severity"] == "review" for f in findings) else 0

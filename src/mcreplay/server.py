@@ -46,9 +46,8 @@ def create_replay_server(bundle: dict[str, Any]) -> Server:
         "mcreplay-structural-replay",
         version="0.1.0",
         instructions=(
-            "OFFLINE STRUCTURAL FIXTURES ONLY. Values are synthetic and do not "
-            "represent real McDonald's prices, availability, eligibility or time. "
-            "This server never contacts the official service."
+            "STRUCTURAL REPLAY: serve synthetic fixtures from a local bundle "
+            "for parser and adapter tests."
         ),
     )
 
@@ -58,8 +57,7 @@ def create_replay_server(bundle: dict[str, Any]) -> Server:
             Tool(
                 name=name,
                 description=(
-                    "Offline value-erased structural fixture for the observed "
-                    "zero-argument call. Not a real business result."
+                    "Replay a synthetic structural fixture for the recorded zero-argument call."
                 ),
                 inputSchema=copy.deepcopy(ZERO_ARGUMENT_SCHEMA),
                 annotations=ToolAnnotations(
@@ -114,9 +112,8 @@ def create_capture_server(output: Path) -> Server:
             Tool(
                 name=CAPTURE_TOOL,
                 description=(
-                    "Minimize one normal-client McDonald's MCP result in local "
-                    "memory and write a private structural fixture. Does not "
-                    "contact McDonald's or store original scalar values."
+                    "Extract structure from one McDonald's MCP result, replace scalar values "
+                    "with placeholders, and save the fixture locally."
                 ),
                 inputSchema={
                     "type": "object",
@@ -185,12 +182,7 @@ def create_capture_server(output: Path) -> Server:
             content=[
                 TextContent(
                     type="text",
-                    text=(
-                        "Saved one value-erased structural fixture locally. "
-                        "Original response values were not persisted. "
-                        "This is not a live verification or official schema. "
-                        "Inspect field names before sharing the bundle."
-                    ),
+                    text=("Saved one structural fixture locally. Source: user-import."),
                 )
             ],
             isError=False,

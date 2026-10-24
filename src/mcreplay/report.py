@@ -1,10 +1,10 @@
-"""A standalone report. No scripts, remote fonts, telemetry or raw responses."""
+"""Render standalone HTML reports of structural changes."""
 
 from collections import Counter
 from html import escape
 from pathlib import Path
 
-# Original packaging-inspired shapes; deliberately not an official logo.
+# Packaging-inspired fries, receipt and replay shapes.
 MOTIF = """
 <g transform="translate(113 22) rotate(9 115 110)">
   <path d="M38 4H211V196L199 188L187 196L175 188L163 196L151 188L139 196L127 188
@@ -53,9 +53,8 @@ border-bottom:1px dashed #cdbfa6;line-height:1.6}th{font-size:12px;font-weight:7
 color:#665b4b}td{font-size:14px}th:first-child{width:17%}th:nth-child(2){width:43%}
 th:last-child{width:40%}td:first-child{font-weight:750;white-space:nowrap}
 tr:last-child td{border-bottom:0}code{font-family:ui-monospace,SFMono-Regular,monospace;
-font-size:12px;overflow-wrap:anywhere}.notice{font-size:13px;line-height:1.8;
-padding:18px 0 0;margin:18px 0 0;color:#665b4b}footer{font-size:12px;color:#665b4b;
-margin-top:14px;padding-top:14px;border-top:1px solid #d8cdb9}
+font-size:12px;overflow-wrap:anywhere}footer{font-size:12px;color:#665b4b;
+margin-top:24px;padding-top:14px;border-top:1px solid #d8cdb9}
 @media(max-width:720px){body{padding:16px 12px}.top{padding:28px 24px}.top-copy{
 max-width:100%}h1{font-size:36px;max-width:72%}.motif{width:145px;right:8px;top:10px}
 .top p{font-size:13px}.badge{font-size:11px}.metrics{margin-top:20px;gap:8px}
@@ -81,7 +80,7 @@ def render_report(findings: list[dict], before: dict, after: dict) -> str:
             f"<td><code>{escape(f['path'])}</code></td><td>{escape(f['message'])}</td></tr>"
             for f in findings
         )
-        or '<tr><td colspan="3">未发现已支持范围内的结构变化。</td></tr>'
+        or '<tr><td colspan="3">未发现结构变化。</td></tr>'
     )
     source = f"{before['source']} → {after['source']}"
     return f"""<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
@@ -90,15 +89,13 @@ def render_report(findings: list[dict], before: dict, after: dict) -> str:
 <title>McReplay · 本地结构比较</title><style>{CSS}</style></head><body><main>
 <header class="top"><div class="top-copy">
 <h1>哪里变了？<br><span>回放一下。</span></h1>
-<span class="badge">{escape(source)} · 真实值已删除的结构样本</span>
+<span class="badge">{escape(source)}</span>
 <p>比较字段、类型与响应格式。保留结构，把变化看清楚。</p></div>
 <svg class="motif" viewBox="0 0 340 280" aria-hidden="true">{MOTIF}</svg></header>
 <div class="checker" aria-hidden="true"></div><div class="metrics">{cards}</div>
 <div class="receipt"><table><thead><tr><th>检查结果</th><th>变化位置</th><th>变化说明</th>
 </tr></thead><tbody>{rows}</tbody></table></div>
-<div class="notice">此报告比较有限观察样本，并非官方完整契约。合成回放不能验证金额、日期、
-库存或优惠资格。text 表示未解析文本，必须人工检查适配器行为。</div>
-<footer>离线生成 · 无远程资源、无埋点 · synthetic 表示合成演示 · 非麦当劳官方产品</footer>
+<footer>提取结构 → 比较变化 → 本地回放</footer>
 </main></body></html>"""
 
 
