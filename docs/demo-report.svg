@@ -1,13 +1,60 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="520" viewBox="0 0 1100 520" role="img" aria-labelledby="title desc">
-<title id="title">McReplay 合成演示报告示意</title><desc id="desc">合成样本中的时间字段类型变化、活动字段删除、营养文本变空；不是官方实测或界面截图。</desc>
-<rect width="1100" height="520" rx="20" fill="#f3f4ef"/>
-<g font-family="system-ui,sans-serif"><text x="55" y="54" fill="#386855" font-size="13" letter-spacing="3">MCREPLAY / LOCAL CONTRACT LAB</text>
-<text x="55" y="119" fill="#152c29" font-size="42" font-weight="700">接口在变，测试有据。</text>
-<rect x="55" y="145" width="460" height="33" rx="5" fill="#e4eab8"/><text x="67" y="167" font-size="14" fill="#152c29">合成演示 · 报告示意图 · 不是官方响应或界面截图</text>
-<line x1="55" y1="203" x2="1045" y2="203" stroke="#ccd6cd"/>
-<rect x="55" y="228" width="990" height="201" rx="12" fill="white" stroke="#dde2d9"/>
-<g fill="#52635e" font-size="13"><text x="77" y="260">检查</text><text x="270" y="260">有限观察样本中的变化</text><text x="866" y="260">处理</text></g>
-<g fill="#152c29" font-size="16"><text x="77" y="305">now-time-info</text><text x="270" y="305">timestamp：integer → string</text><text x="866" y="305" fill="#a43c2f">破坏风险</text>
-<text x="77" y="355">campaign-calendar</text><text x="270" y="355">events[].endDate：字段消失</text><text x="866" y="355" fill="#a43c2f">破坏风险</text>
-<text x="77" y="405">list-nutrition-foods</text><text x="270" y="405">text → empty：不推测业务含义</text><text x="866" y="405" fill="#a43c2f">破坏风险</text></g>
-<text x="55" y="477" fill="#52635e" font-size="14">真实值已删除 · 标准 MCP stdio 回放 · 离线 CI · 无会员 Token · 非麦当劳官方产品</text></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="670" viewBox="0 0 1200 670" role="img" aria-labelledby="title desc">
+<title id="title">麦回放：合成结构变化演示</title>
+<desc id="desc">红黄包装配色、薯条与回放符号配图。三处合成结构变化：时间字段类型改变、活动字段消失、营养文本变空。非官方响应或界面截图。</desc>
+<defs><pattern id="sesame" width="22" height="26" patternUnits="userSpaceOnUse"><path d="m5 5 4 6" stroke="#ffbc0d" stroke-width="3"/></pattern></defs>
+<rect width="1200" height="670" fill="#fff8e7"/>
+<rect width="1200" height="270" fill="#d90016"/>
+<rect x="1160" width="40" height="270" fill="url(#sesame)" opacity=".55"/>
+<g font-family="-apple-system,BlinkMacSystemFont,Segoe UI,PingFang SC,Microsoft YaHei,sans-serif" fill="#292218">
+<text x="44" y="100" fill="#fff8e7" font-size="66" font-weight="900" letter-spacing="-2">哪里变了？</text>
+<text x="44" y="182" fill="#ffbc0d" font-size="66" font-weight="900" letter-spacing="-2">回放一下。</text>
+<text x="47" y="236" fill="#fff8e7" font-size="18">保留结构，把变化看清楚。</text>
+<g transform="translate(812 0) scale(1.01)">
+<g transform="translate(113 22) rotate(9 115 110)">
+  <path d="M38 4H211V196L199 188L187 196L175 188L163 196L151 188L139 196L127 188
+  L115 196L103 188L91 196L79 188L67 196L55 188L38 196Z" fill="#fff8e7"/>
+  <path d="M63 36H182M63 49H146M63 79H169M63 92H182M63 105H161" stroke="#d90016"
+  stroke-width="7"/>
+  <path d="M63 139H117M63 151H163" stroke="#d90016" stroke-width="4"
+  stroke-dasharray="4 5"/>
+  <circle cx="176" cy="153" r="21" fill="#ffbc0d"/>
+  <path d="m166 153 7 7 13-16" fill="none" stroke="#292218" stroke-width="4"/>
+</g>
+<g transform="translate(22 47) rotate(-8 98 102)">
+  <path d="M38 111 28 24 46 22 57 112M61 110 59 6 78 6 81 113
+  M88 109 91 19 110 21 106 116M115 111 126 0 145 2 135 118
+  M140 116 157 31 176 35 158 120" fill="#ffbc0d"/>
+  <path d="M24 96Q96 130 177 96L159 202Q98 220 43 202Z" fill="#ffbc0d"/>
+  <path d="M42 119Q98 141 159 119L147 190Q98 203 55 190Z" fill="#d90016"/>
+  <path d="M119 154a24 24 0 1 0 0 25" fill="none" stroke="#fff8e7"
+  stroke-width="9" stroke-linecap="square"/>
+  <path d="m110 139 23 8-20 15Z" fill="#fff8e7"/>
+</g>
+<path d="m32 29 8-12m-17 8 13 3M306 210l11 11m-1-17-9 10" stroke="#ffbc0d"
+stroke-width="5"/>
+</g>
+<rect x="0" y="270" width="16" height="16" fill="#d90016"/><rect x="16" y="270" width="16" height="16" fill="#ffbc0d"/><rect x="32" y="270" width="16" height="16" fill="#d90016"/><rect x="48" y="270" width="16" height="16" fill="#ffbc0d"/><rect x="64" y="270" width="16" height="16" fill="#d90016"/><rect x="80" y="270" width="16" height="16" fill="#ffbc0d"/><rect x="96" y="270" width="16" height="16" fill="#d90016"/><rect x="112" y="270" width="16" height="16" fill="#ffbc0d"/><rect x="128" y="270" width="16" height="16" fill="#d90016"/><rect x="144" y="270" width="16" height="16" fill="#ffbc0d"/><rect x="160" y="270" width="16" height="16" fill="#d90016"/><rect x="176" y="270" width="16" height="16" fill="#ffbc0d"/><rect x="192" y="270" width="16" height="16" fill="#d90016"/><rect x="208" y="270" width="16" height="16" fill="#ffbc0d"/><rect x="224" y="270" width="16" height="16" fill="#d90016"/><rect x="240" y="270" width="16" height="16" fill="#ffbc0d"/><rect x="256" y="270" width="16" height="16" fill="#d90016"/><rect x="272" y="270" width="16" height="16" fill="#ffbc0d"/><rect x="288" y="270" width="16" height="16" fill="#d90016"/><rect x="304" y="270" width="16" height="16" fill="#ffbc0d"/><rect x="320" y="270" width="16" height="16" fill="#d90016"/><rect x="336" y="270" width="16" height="16" fill="#ffbc0d"/><rect x="352" y="270" width="16" height="16" fill="#d90016"/><rect x="368" y="270" width="16" height="16" fill="#ffbc0d"/><rect x="384" y="270" width="16" height="16" fill="#d90016"/><rect x="400" y="270" width="16" height="16" fill="#ffbc0d"/><rect x="416" y="270" width="16" height="16" fill="#d90016"/><rect x="432" y="270" width="16" height="16" fill="#ffbc0d"/><rect x="448" y="270" width="16" height="16" fill="#d90016"/><rect x="464" y="270" width="16" height="16" fill="#ffbc0d"/><rect x="480" y="270" width="16" height="16" fill="#d90016"/><rect x="496" y="270" width="16" height="16" fill="#ffbc0d"/><rect x="512" y="270" width="16" height="16" fill="#d90016"/><rect x="528" y="270" width="16" height="16" fill="#ffbc0d"/><rect x="544" y="270" width="16" height="16" fill="#d90016"/><rect x="560" y="270" width="16" height="16" fill="#ffbc0d"/><rect x="576" y="270" width="16" height="16" fill="#d90016"/><rect x="592" y="270" width="16" height="16" fill="#ffbc0d"/><rect x="608" y="270" width="16" height="16" fill="#d90016"/><rect x="624" y="270" width="16" height="16" fill="#ffbc0d"/><rect x="640" y="270" width="16" height="16" fill="#d90016"/><rect x="656" y="270" width="16" height="16" fill="#ffbc0d"/><rect x="672" y="270" width="16" height="16" fill="#d90016"/><rect x="688" y="270" width="16" height="16" fill="#ffbc0d"/><rect x="704" y="270" width="16" height="16" fill="#d90016"/><rect x="720" y="270" width="16" height="16" fill="#ffbc0d"/><rect x="736" y="270" width="16" height="16" fill="#d90016"/><rect x="752" y="270" width="16" height="16" fill="#ffbc0d"/><rect x="768" y="270" width="16" height="16" fill="#d90016"/><rect x="784" y="270" width="16" height="16" fill="#ffbc0d"/><rect x="800" y="270" width="16" height="16" fill="#d90016"/><rect x="816" y="270" width="16" height="16" fill="#ffbc0d"/><rect x="832" y="270" width="16" height="16" fill="#d90016"/><rect x="848" y="270" width="16" height="16" fill="#ffbc0d"/><rect x="864" y="270" width="16" height="16" fill="#d90016"/><rect x="880" y="270" width="16" height="16" fill="#ffbc0d"/><rect x="896" y="270" width="16" height="16" fill="#d90016"/><rect x="912" y="270" width="16" height="16" fill="#ffbc0d"/><rect x="928" y="270" width="16" height="16" fill="#d90016"/><rect x="944" y="270" width="16" height="16" fill="#ffbc0d"/><rect x="960" y="270" width="16" height="16" fill="#d90016"/><rect x="976" y="270" width="16" height="16" fill="#ffbc0d"/><rect x="992" y="270" width="16" height="16" fill="#d90016"/><rect x="1008" y="270" width="16" height="16" fill="#ffbc0d"/><rect x="1024" y="270" width="16" height="16" fill="#d90016"/><rect x="1040" y="270" width="16" height="16" fill="#ffbc0d"/><rect x="1056" y="270" width="16" height="16" fill="#d90016"/><rect x="1072" y="270" width="16" height="16" fill="#ffbc0d"/><rect x="1088" y="270" width="16" height="16" fill="#d90016"/><rect x="1104" y="270" width="16" height="16" fill="#ffbc0d"/><rect x="1120" y="270" width="16" height="16" fill="#d90016"/><rect x="1136" y="270" width="16" height="16" fill="#ffbc0d"/><rect x="1152" y="270" width="16" height="16" fill="#d90016"/><rect x="1168" y="270" width="16" height="16" fill="#ffbc0d"/><rect x="1184" y="270" width="16" height="16" fill="#d90016"/>
+<text x="44" y="337" font-size="24" font-weight="800">本次检查</text>
+<text x="174" y="336" font-size="15" fill="#665b4b">合成样本 · 仅供开发测试</text>
+<text x="1055" y="339" font-size="38" font-weight="850" fill="#bd0013">03</text>
+<text x="1115" y="336" font-size="16" font-weight="700">处变化</text>
+<path d="M44 366H1156" stroke="#292218" stroke-width="2"/>
+<rect x="44" y="380" width="1112" height="224" fill="#eadfc9"/>
+<rect x="44" y="376" width="1112" height="224" fill="#fffdf7" stroke="#e4d7bf"/>
+<g font-size="14" fill="#665b4b" font-weight="600"><text x="64" y="409">检查工具</text><text x="363" y="409">观察到的变化</text><text x="998" y="409">检查结果</text></g>
+<text x="64" y="454" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="18">now-time-info</text>
+ <text x="363" y="454" font-size="20">timestamp：integer → string</text>
+ <rect x="993" y="431" width="136" height="32" rx="2" fill="#ffbc0d"/>
+ <circle cx="1008" cy="447" r="4" fill="#bd0013"/>
+ <text x="1022" y="453" font-size="16" font-weight="700" fill="#7c0010">破坏风险</text><path d="M64 476H1136" stroke="#cdbfa6" stroke-dasharray="4 5"/><text x="64" y="510" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="18">campaign-calendar</text>
+ <text x="363" y="510" font-size="20">events[].endDate：字段消失</text>
+ <rect x="993" y="487" width="136" height="32" rx="2" fill="#ffbc0d"/>
+ <circle cx="1008" cy="503" r="4" fill="#bd0013"/>
+ <text x="1022" y="509" font-size="16" font-weight="700" fill="#7c0010">破坏风险</text><path d="M64 532H1136" stroke="#cdbfa6" stroke-dasharray="4 5"/><text x="64" y="566" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="18">list-nutrition-foods</text>
+ <text x="363" y="566" font-size="20">text → empty：不推测业务含义</text>
+ <rect x="993" y="543" width="136" height="32" rx="2" fill="#ffbc0d"/>
+ <circle cx="1008" cy="559" r="4" fill="#bd0013"/>
+ <text x="1022" y="565" font-size="16" font-weight="700" fill="#7c0010">破坏风险</text>
+<text x="44" y="641" font-size="14" fill="#665b4b">合成演示 · 真实值已删除 · 标准 MCP 回放 · 无需会员凭证</text>
+<text x="1156" y="641" text-anchor="end" font-size="14" fill="#665b4b">非官方响应或界面截图 · 非麦当劳官方产品</text>
+</g></svg>
