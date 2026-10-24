@@ -1,0 +1,78 @@
+# McDonald's China MCP capability research
+
+Research date: 2026-10-24 UTC. No authenticated calls were possible: this session has no MCP token binding. Terminal connectivity recovered after the initial research; official authenticated calls remain unverified. All reliability judgments below are provisional, not production certifications.
+
+## Evidence and hierarchy
+
+1. Primary official integration guide: https://github.com/M-China/mcd-mcp-server/blob/main/README.md (blob `19ba45bb7472199a09c4fb37e008ed9095bbf00b`). Official endpoint `https://mcp.mcd.cn`, Streamable HTTP, `Authorization: Bearer <token>`, 600 requests/minute/token, documented HTTP 401 and 429. Token activation requires phone login and acceptance of terms at https://open.mcd.cn/mcp. Service is for mainland China excluding Hong Kong/Macau/Taiwan.
+2. Official repository tree queried through GitHub API: https://api.github.com/repos/M-China/mcd-mcp-server/git/trees/main?recursive=1 at revision `e90ecc5c918f307ff5f997caa73e4d60bef375e9` contains ONLY `README.md` and `README_EN.md`. There is no implementation, machine-readable input/output schema, or runnable SDK example in this repository. Descriptions cannot establish exact JSON contracts.
+3. Initial web reads of https://open.mcd.cn/mcp and https://cdn.mcd.cn/cms/pages/MCPServerRules.html failed. After terminal connectivity recovered, both were retrieved directly. The platform returns an application shell requiring JavaScript; no account console was inspected. Service rules full text was extracted from the page configuration, version 2025-12-03: articles 3 and 6 restrict automated access. This determined the offline-first product boundary; see [product selection](product-selection.md).
+4. Official repo issue threads are useful observed pain points, but user reports are not official API guarantees: https://github.com/M-China/mcd-mcp-server/issues/9 (meal choice pool), /11 (nutrition IDs), /13 (order-list limited to recent10), /16 (35 vs33 tools, price mapping, empty nutrition responses), /4 (rate-limit incident acknowledged fixed by maintainer).
+5. Secondary discovery aid ONLY: https://github.com/CRFXN5C/mcd-mcp-kit/blob/main/TOOLS.md and PITFALLS.md claim 2026-10-23 `tools/list` captures. Required-field names below labelled S derive from that public capture, not our own verification. Do not copy this project's implementation or make our own live-test claims from it.
+
+## Contract interpretation
+
+All 33 documented tools require bearer authentication at the transport boundary. `Public-like` means returned content is not inherently account-specific, NOT anonymous access. A returned `data` description is a semantic summary from official documentation, not an output JSON schema. `S:` denotes secondary reported required fields; `O:` denotes exact schema example in an official-repository issue. Optional fields, types, enums and output schema remain unknown until an authorized `tools/list` call. Clients should discover tools and validate actual input schema at runtime rather than inventing field names.
+
+Reliability grades: **A?** low complexity but untested; **B?** dynamic/user data needs schema, empty/error handling; **C?** reported limitations or complex contextual/business rules; **W** real account writes, cannot test without separate explicit approval. None means production verified.
+
+## Exhaustive matrix (officially documented 33)
+
+| Tool | Actual purpose / output semantics | Required input evidence | Account dependency / state | Problem and combinations | Reliability / missing data |
+|---|---|---|---|---|---|
+| `list-nutrition-foods` | Common products' energy, protein, fat, carbohydrate, sodium, calcium | S: `{}` | Public-like; read | Explain nutrition; combine menu and meal composition | C?: issue16 reports intermittent empty responses; issue11 lacks productCode; no guaranteed menu/nutrition join; no allergy guarantee. S says data is TOON-like text, not array. |
+| `delivery-query-addresses` | Existing saved delivery addresses | S: `{}` | Private address book; read | Select a delivery address, then query delivery stores | B?: highly sensitive names/phones/addresses; no need to persist/export. |
+| `delivery-create-address` | Adds delivery address | S: address,addressDetail,city,contactName,phone | Private; WRITE | Add a missing address before delivery discovery | W: no documented delete-address counterpart; don't invoke in research. |
+| `delivery-query-stores` | Stores able to deliver to selected address | S: beType,addressId | Address dependent; read | Establish actual delivery availability before menus/prices | C?: delivery availability/time contextual; cannot infer from nearby-store search. |
+| `query-meal-assistance` | Enterprise catering assistance services at store | S: storeCode | Enterprise beType=6; read | Assistance/service selection before group price calculation | C?: enterprise-only, not generic personal meal planning. |
+| `query-nearby-stores` | Available nearby restaurants | S: beType,searchType | User provided location/search; read | Find pickup/drive-through store then menu | C?: location/search optional parameters and enums undocumented in official README; secondary says beCode absent for pickup and present for drive-through. |
+| `query-store-coupons` | Coupons valid for current store/order context | S: orderType,beType,storeCode | Private wallet + store context; read | Establish eligibility, then calculate-price | C?: wallet possession alone does not establish eligibility or stacking. |
+| `query-meals` | Current store's sellable menu, categories, codes, tags | S: storeCode,orderType,beType | Store/channel context; read | Actual available products; then meal detail and pricing | B?: no global inventory guarantee; issue16 says product identifier is code. |
+| `query-meal-detail` | Product and set composition, replacement/customization options | S: storeCode,orderType,beType,code; issue9 example omits beType (inconsistent evidence) | Store/channel; read | Inspect composition, map meal components to nutrition, customize only available options | C?: issue9 reports some flexible sets only show defaults, not complete choice pools; do not invent alternatives. |
+| `calculate-price` | Official subtotal, delivery fee, discount, payable total for supplied basket/coupons | S: storeCode,orderType,beType; items/productCode/quantity conditional business requirements | Store/user/coupon context; read calculation | Price evidence and comparison before order creation | C?: issue16 wrong code→productCode mapping silently yields price0. Missing/zero price must not be treated as free. Amount units require runtime confirmation; secondary reports cents. |
+| `create-order` | Creates food order and returns details/payment link | S: storeCode,orderType,beType; basket/context conditional | Private; WRITE | Complete an explicitly confirmed basket | W: payment link creation still changes state. No test purchases/orders. |
+| `cancel-order` | Cancels food order | S: orderId,cancelReasonCode | Private; WRITE | User explicitly cancels an existing order | W: not reversible read; not applicable to mall orders. |
+| `query-order` | Order status, items, delivery details | S: orderId | Private own order; read | Check current status/confirmation; combine recent order list | B?: raw response may contain address, phone, payment link/QR; status enums undocumented. |
+| `order-list` | Recent pickup/delivery food orders, not mall | O in issue13: object properties={} (reported 2026-07-30); S: `{}` | Private; read | Recent order review or authorized personal local archive | C?: reported fixed latest10, no cursor/date/total. Never label this full history/month/year analysis. |
+| `campaign-calendar` | Current month's past/current/future marketing activities | S: `{}` | Public-like activities + possible personal subscription status; read | Event planning and dated information; combine server time | B?: only current month in official description; not future-month forecast or price guarantee. |
+| `available-coupons` | Coupons currently claimable via 麦麦省 | S: `{}` | Account eligibility; read | See unclaimed offers, separate from owned wallet | B?: availability is not possession or current order eligibility. |
+| `auto-bind-coupons` | Claims all currently claimable 麦麦省 coupons | S: `{}` | Account wallet; WRITE | User-requested bulk claim | W: no couponId needed, not read-only despite no cash cost. |
+| `query-my-coupons` | User wallet coupon assets | S: `{}` | Private; read | Inventory/expiry review; compare with store eligibility | C?: does not validate store/channel/order applicability; avoid guaranteed saving totals. |
+| `query-my-account` | Available/cumulative/frozen/soon-expiring points | S: `{}` | Private loyalty; read | Account/expiry awareness, compare with mall items | B?: expiry bucket dates and point fields not specified in official README. |
+| `mall-points-products` | Mall points/cash products, excluding third-party redemption codes | S: `{}`; optional category filter reported | Account catalog; read | Discover goods, coupon and party SPUs then details | C?: do not assume every category/product available or solely points-based. |
+| `mall-product-detail` | Images, point cost, validity, explanation, SKU specifications | S: spuId | Catalog; read | Confirm actual product, SKU and conditions before redemption | B?: stock and prices change; secondary says shopId distinguishes mall vsparty. |
+| `mall-create-order` | Redeems virtual/physical goods; deducts points/stock, returns order/coupon codes | S: skuId,spuCategory | Private; WRITE | Explicit redemption | W: point spending, possible cash component; no automatic retries. |
+| `now-time-info` | Current timestamp/date/timezone/UTC time | S: `{}` | Public-like; read | Anchor dated decisions consistently | A?: simplest tool, still no SLA/live validation. |
+| `query-lottery-info` | Activity status, prizes, cost rules, user resources | S: `{}` | Public activity + private points/chances; read | Explain costs without drawing | B?: no documented probability guarantee; don't invent expected value without odds. |
+| `draw-lottery` | Draws once, consumes points or chance, returns outcome | S: `{}` | Private; WRITE | Only separate explicit draw approval | W: no automatic retries/loops; secondary reports additional frequency limit. |
+| `query-my-prizes` | User's prize records, reverse chronological, supports pagination | S: `{}` required; optional pagination unknown | Private; read | Find prize entitlements/status | B?: paging contract and status enums not in official README. |
+| `mall-order-list` | Last year's mall purchase/redemption orders | S: `{}` required; optional lastId,size reported | Private; read | Review mall orders, then details | C?: mall history is NOT a substitute for food order history; secondary <=10/page. |
+| `mall-order-detail` | Mall order paid points/cash and status | S: orderId | Private; read | Confirm redemption/purchase outcome | B?: sensitive coupon/address/payment fields possible. |
+| `query-party-city` | Cities participating in a selected party/event product | S: spuId | Product context; read | Discover activity location availability | B?: need actual SPU from catalog, not guessed activity IDs. |
+| `query-party-store` | Participating stores within selected city | S: code (city code); optional spu context uncertain | City/product context; read | Compare party venues, then date availability | C?: exact schema requires discovery. |
+| `query-partystore-date` (README spelling) | Bookable dates for store/product | S runtime name: query-party-store-date, required spuId,storeCode | Product/store; read | Match dates before session query | C?: official README/runtime reported naming mismatch; use discovered name only. |
+| `query-partystore-session` (README spelling) | Bookable sessions for store/date/product | S runtime name: query-party-store-session, required spuId,storeCode,dateStr | Product/store/date; read | Compare actual available sessions and slots | C?: naming mismatch; inquiry does not reserve availability. |
+| `party-order-create` | Creates selected event booking order | S: partyType; location/session/product conditional | Private; WRITE | Explicit confirmed booking | W: event booking changes state; no research invocation. |
+
+## Runtime-only tools reported by third parties (not adopted as documented capability)
+
+- `query-promotions`: S says required storeCode,orderType,beType; only enterprise catering beType=6; returns raw effective promotion rules. Issue16 supports presence. Must not assume personal order eligibility.
+- `query-survey-coupon`: S says required orderId; reads own order satisfaction questionnaire and related coupon redemption status. Official README doesn't describe it. Must inspect authorized runtime contract before any use. They are not used by MaiReplay.
+
+## Limits affecting product selection
+
+- There is no documented complete personal food-history export. A local explicitly authorized archive can accumulate future observations but cannot recover missed older orders. Avoid annual totals, default status assumptions, or claims of full spending coverage.
+- Nutrition-to-menu joining is ambiguous; no allergy/ingredient safety guarantee. Nutrition assistants need abstention, coverage indicators and explicit uncertainty.
+- No general price optimizer guarantee: coupon compatibility, store/channel, missing choice pools and authoritative calculate-price are indispensable. This is crowded and contract-heavy.
+- Party/session planning is a real multi-tool workflow but already well represented by leading competition entries, and volatile stock would need fresh validation.
+- Read-only post-order review, privacy-safe receipt reconciliation and explainable partial evidence are underused relative to coupons and meal recommendations. Implementing narrowly scoped deterministic analysis can provide more utility than another conversational wrapper.
+- Without a token, validate local integration through standard SDK protocol tests and synthetic fixtures, label both explicitly, and do not claim official authentication succeeded. MaiReplay does not implement remote discovery or probes: the verified service rules restrict automated access. Normal-client explicitly requested queries may feed the local Skill workflow.
+
+## Transport and security recommendations
+
+- Preserve official Streamable HTTP endpoint and bearer header; use a maintained official MCP SDK if dependencies/network permit. Endpoint must be fixed or tightly allowlisted to avoid token exfiltration.
+- Treat runtime tool list as data. Reject unknown tool names and all writes in a read-only product before transport invocation. Never use model-suggested arbitrary tool calls.
+- Inspect both protocol errors and business errors, empty content, structuredContent, text-encoded envelopes and possible non-JSON HTTP errors; do not print upstream bodies containing secrets or personal data.
+- In a separately authorized remote client, bounded retry policy would need to respect service rules and Retry-After. MaiReplay implements no remote transport or retry loop; normal-client errors stop the Skill workflow.
+- Token via environment/secure local prompt only. No source/config/browser persistence. Raw account response should not enter public demos or logs. Redact/allowlist fields, do not rely solely on keyword redaction.
+- Noncommercial personal integration examples only per official repository §5; do not imply official endorsement or reuse official trademarks/assets as if licensed. License original code separately from official declaration and cited docs.

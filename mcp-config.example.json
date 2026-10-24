@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "mcd-mcp": {
+      "type": "streamablehttp",
+      "url": "https://mcp.mcd.cn",
+      "headers": {"Authorization": "Bearer ${MCD_MCP_TOKEN}"}
+    },
+    "maireplay-capture": {
+      "command": "${MAIREPLAY_EXECUTABLE}",
+      "args": ["capture", "--out", "${MAIREPLAY_CAPTURE_PATH}"]
+    }
+  }
+}

@@ -1,0 +1,189 @@
+{
+  "format": "maireplay/v1",
+  "source": "synthetic",
+  "tools": [
+    {
+      "name": "campaign-calendar",
+      "inputSchema": {
+        "type": "object",
+        "properties": {}
+      }
+    },
+    {
+      "name": "list-nutrition-foods",
+      "inputSchema": {
+        "type": "object",
+        "properties": {}
+      }
+    },
+    {
+      "name": "now-time-info",
+      "inputSchema": {
+        "type": "object",
+        "properties": {}
+      }
+    }
+  ],
+  "observations": [
+    {
+      "name": "campaign-calendar",
+      "arguments": {},
+      "response": {
+        "content": [
+          {
+            "type": "text",
+            "text": "## Original Response\n{\"events\":[{\"name\":\"[synthetic]\",\"endDate\":\"[synthetic]\"}]}"
+          }
+        ],
+        "isError": false
+      },
+      "contract": {
+        "envelope": {
+          "type": "object",
+          "properties": {
+            "content": {
+              "type": "array",
+              "items": [
+                {
+                  "properties": {
+                    "text": {
+                      "type": "string"
+                    },
+                    "type": {
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                }
+              ]
+            },
+            "isError": {
+              "type": "boolean"
+            }
+          }
+        },
+        "blocks": [
+          {
+            "representation": "markdown-json",
+            "shape": {
+              "type": "object",
+              "properties": {
+                "events": {
+                  "type": "array",
+                  "items": [
+                    {
+                      "properties": {
+                        "endDate": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        }
+                      },
+                      "type": "object"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        ],
+        "structured": null,
+        "isError": false,
+        "redactedKeys": 0
+      }
+    },
+    {
+      "name": "list-nutrition-foods",
+      "arguments": {},
+      "response": {
+        "content": [
+          {
+            "type": "text",
+            "text": "[synthetic text]"
+          }
+        ],
+        "isError": false
+      },
+      "contract": {
+        "envelope": {
+          "type": "object",
+          "properties": {
+            "content": {
+              "type": "array",
+              "items": [
+                {
+                  "properties": {
+                    "text": {
+                      "type": "string"
+                    },
+                    "type": {
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                }
+              ]
+            },
+            "isError": {
+              "type": "boolean"
+            }
+          }
+        },
+        "blocks": [
+          {
+            "representation": "text",
+            "shape": null
+          }
+        ],
+        "structured": null,
+        "isError": false,
+        "redactedKeys": 0
+      }
+    },
+    {
+      "name": "now-time-info",
+      "arguments": {},
+      "response": {
+        "content": [],
+        "isError": false,
+        "structuredContent": {
+          "timestamp": 0,
+          "timezone": "[synthetic]"
+        }
+      },
+      "contract": {
+        "envelope": {
+          "type": "object",
+          "properties": {
+            "content": {
+              "type": "array",
+              "items": []
+            },
+            "isError": {
+              "type": "boolean"
+            },
+            "structuredContent": {
+              "type": "object",
+              "properties": {}
+            }
+          }
+        },
+        "blocks": [],
+        "structured": {
+          "type": "object",
+          "properties": {
+            "timestamp": {
+              "type": "integer"
+            },
+            "timezone": {
+              "type": "string"
+            }
+          }
+        },
+        "isError": false,
+        "redactedKeys": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'">
+<title>MaiReplay · 本地结构比较</title><style>
+:root{font-family:ui-sans-serif,system-ui,sans-serif;color:#152c29;background:#f3f4ef}
+*{box-sizing:border-box}body{margin:0;padding:48px 24px}main{max-width:1080px;margin:auto}
+.eyebrow{font:700 12px monospace;letter-spacing:.16em;color:#386855}h1{font-size:48px;
+letter-spacing:-.05em;margin:16px 0}p{line-height:1.8;color:#52635e}.top{border-bottom:1px
+solid #ccd6cd;padding-bottom:28px}.badge{display:inline-block;background:#e4eab8;padding:
+8px 12px;border-radius:6px;font-size:13px}.metrics{display:grid;grid-template-columns:
+repeat(3,1fr);gap:16px;margin:28px 0}.metric{background:white;border:1px solid #dde2d9;
+padding:24px;border-radius:12px}.metric b{display:block;font-size:38px}.metric span{
+font-size:14px;color:#52635e}table{width:100%;border-collapse:collapse;background:white;
+border:1px solid #dde2d9}td,th{text-align:left;padding:18px;border-bottom:1px solid #e4e8e1;
+vertical-align:top}th{font-size:12px;color:#52635e}code{font-size:12px;overflow-wrap:anywhere}
+.breaking{color:#a43c2f}.review{color:#89620d}.info{color:#376653}.notice{padding:20px;
+border-left:3px solid #9db66c;margin:24px 0;background:#eaf0e2}footer{font-size:12px;
+color:#52635e;margin-top:32px}@media(max-width:640px){body{padding:24px 12px}h1{
+font-size:36px}.metrics{gap:6px}.metric{padding:12px}.metric b{font-size:28px}td,th{
+padding:10px}table{font-size:13px}}
+</style></head><body><main>
+<div class="top"><div class="eyebrow">MAIREPLAY / LOCAL CONTRACT LAB</div>
+<h1>接口在变，测试有据。</h1><span class="badge">synthetic → synthetic · 真实值已删除的结构样本</span>
+<p>工具、参数和响应结构的可解释比较。所有检查在本地运行，无需会员凭证。</p></div>
+<div class="metrics"><div class="metric"><b class="breaking">3</b><span>破坏风险</span></div><div class="metric"><b class="review">0</b><span>需要审查</span></div><div class="metric"><b class="info">0</b><span>兼容性提示</span></div></div>
+<table><thead><tr><th>级别</th><th>位置</th><th>发现</th></tr></thead><tbody><tr><td class="breaking">破坏风险</td><td><code>/observations/campaign-calendar/contract/blocks/0/shape/events/items/endDate</code></td><td>Previously observed output field is absent in the new sample.</td></tr><tr><td class="breaking">破坏风险</td><td><code>/observations/list-nutrition-foods/contract/blocks/0/representation</code></td><td>Response representation changed; parser selection may need updating.</td></tr><tr><td class="breaking">破坏风险</td><td><code>/observations/now-time-info/contract/structured/timestamp</code></td><td>Observed output type changed; adapters depending on the old type may fail.</td></tr></tbody></table>
+<div class="notice">此报告比较有限观察样本，并非官方完整契约。合成回放不能验证金额、日期、
+库存或优惠资格。text 表示未解析文本，必须人工检查适配器行为。</div>
+<footer>MaiReplay 麦回放 · 非麦当劳官方产品 · 无远程资源、无埋点 · synthetic 表示合成演示</footer>
+</main></body></html>

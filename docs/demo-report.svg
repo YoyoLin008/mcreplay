@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="520" viewBox="0 0 1100 520" role="img" aria-labelledby="title desc">
+<title id="title">MaiReplay 合成演示报告示意</title><desc id="desc">合成样本中的时间字段类型变化、活动字段删除、营养文本变空；不是官方实测或界面截图。</desc>
+<rect width="1100" height="520" rx="20" fill="#f3f4ef"/>
+<g font-family="system-ui,sans-serif"><text x="55" y="54" fill="#386855" font-size="13" letter-spacing="3">MAIREPLAY / LOCAL CONTRACT LAB</text>
+<text x="55" y="119" fill="#152c29" font-size="42" font-weight="700">接口在变，测试有据。</text>
+<rect x="55" y="145" width="460" height="33" rx="5" fill="#e4eab8"/><text x="67" y="167" font-size="14" fill="#152c29">合成演示 · 报告示意图 · 不是官方响应或界面截图</text>
+<line x1="55" y1="203" x2="1045" y2="203" stroke="#ccd6cd"/>
+<rect x="55" y="228" width="990" height="201" rx="12" fill="white" stroke="#dde2d9"/>
+<g fill="#52635e" font-size="13"><text x="77" y="260">检查</text><text x="270" y="260">有限观察样本中的变化</text><text x="866" y="260">处理</text></g>
+<g fill="#152c29" font-size="16"><text x="77" y="305">now-time-info</text><text x="270" y="305">timestamp：integer → string</text><text x="866" y="305" fill="#a43c2f">破坏风险</text>
+<text x="77" y="355">campaign-calendar</text><text x="270" y="355">events[].endDate：字段消失</text><text x="866" y="355" fill="#a43c2f">破坏风险</text>
+<text x="77" y="405">list-nutrition-foods</text><text x="270" y="405">text → empty：不推测业务含义</text><text x="866" y="405" fill="#a43c2f">破坏风险</text></g>
+<text x="55" y="477" fill="#52635e" font-size="14">真实值已删除 · 标准 MCP stdio 回放 · 离线 CI · 无会员 Token · 非麦当劳官方产品</text></g></svg>
