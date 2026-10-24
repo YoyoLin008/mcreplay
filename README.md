@@ -4,7 +4,7 @@
 
 面向维护麦当劳 MCP Skill、解析器和演示应用的个人开发者：删除响应真实值，保留结构，比较变化，再通过标准 MCP 在本地回放。
 
-![结构变化报告](docs/demo-report.svg)
+![结构变化报告](docs/demo-report.png)
 
 ## 解决什么问题
 
