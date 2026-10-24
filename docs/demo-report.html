@@ -1,16 +1,15 @@
 <!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="mcreplay-source" content="synthetic → synthetic">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'">
 <title>McReplay · 本地结构比较</title><style>
 :root{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC",
 "Microsoft YaHei",sans-serif;color:#292218;background:#fff8e7}
 *{box-sizing:border-box}body{margin:0;padding:40px 24px}main{max-width:1100px;margin:auto}
-.top{position:relative;background:#d90016;color:#fff8e7;padding:36px 42px 32px;
+.top{position:relative;background:#d90016;color:#fff8e7;padding:64px 42px;min-height:260px;
 overflow:hidden}.top-copy{position:relative;z-index:1;max-width:72%}
-h1{font-size:58px;font-weight:850;line-height:1.1;letter-spacing:-.045em;margin:0 0 20px}
-h1 span{color:#ffbc0d}.top p{max-width:590px;font-size:15px;line-height:1.8;margin:16px 0 0}
-.badge{display:inline-block;background:#fff8e7;color:#292218;padding:7px 11px;
-font-size:12px;font-weight:650}.motif{position:absolute;width:290px;right:22px;top:24px}
+h1{font-size:58px;font-weight:850;line-height:1.1;letter-spacing:-.045em;margin:0}
+h1 span{color:#ffbc0d}.motif{position:absolute;width:290px;right:22px;top:10px}
 .checker{height:16px;background:repeating-conic-gradient(#d90016 0% 25%,#ffbc0d 0% 50%)
 0 0/32px 32px}.metrics{display:flex;align-items:center;gap:0;border-bottom:2px solid
 #292218;margin:28px 0 0;padding-bottom:20px}.metric{display:flex;align-items:baseline;
@@ -24,11 +23,10 @@ border-bottom:1px dashed #cdbfa6;line-height:1.6}th{font-size:12px;font-weight:7
 color:#665b4b}td{font-size:14px}th:first-child{width:17%}th:nth-child(2){width:43%}
 th:last-child{width:40%}td:first-child{font-weight:750;white-space:nowrap}
 tr:last-child td{border-bottom:0}code{font-family:ui-monospace,SFMono-Regular,monospace;
-font-size:12px;overflow-wrap:anywhere}footer{font-size:12px;color:#665b4b;
-margin-top:24px;padding-top:14px;border-top:1px solid #d8cdb9}
-@media(max-width:720px){body{padding:16px 12px}.top{padding:28px 24px}.top-copy{
+font-size:12px;overflow-wrap:anywhere}
+@media(max-width:720px){body{padding:16px 12px}.top{padding:28px 24px;min-height:150px}.top-copy{
 max-width:100%}h1{font-size:36px;max-width:72%}.motif{width:145px;right:8px;top:10px}
-.top p{font-size:13px}.badge{font-size:11px}.metrics{margin-top:20px;gap:8px}
+.metrics{margin-top:20px;gap:8px}
 .metric{padding:0 8px;display:block}.metric b{font-size:32px}.metric span{display:block;
 font-size:12px;margin-top:6px}.receipt{padding:0 16px}table,tbody,tr,td{display:block;
 width:100%}thead{display:none}tr{padding:16px 0;border-bottom:1px dashed #cdbfa6}
@@ -38,8 +36,7 @@ td:first-child{font-size:14px}code{font-size:11px}}
 </style></head><body><main>
 <header class="top"><div class="top-copy">
 <h1>哪里变了？<br><span>回放一下。</span></h1>
-<span class="badge">synthetic → synthetic</span>
-<p>比较字段、类型与响应格式。保留结构，把变化看清楚。</p></div>
+</div>
 <svg class="motif" viewBox="0 0 340 280" aria-hidden="true">
 <g transform="translate(113 22) rotate(9 115 110)">
   <path d="M38 4H211V196L199 188L187 196L175 188L163 196L151 188L139 196L127 188
@@ -67,5 +64,4 @@ stroke-width="5"/>
 <div class="checker" aria-hidden="true"></div><div class="metrics"><div class="metric"><b class="breaking">3</b><span>破坏风险</span></div><div class="metric"><b class="review">0</b><span>需要审查</span></div><div class="metric"><b class="info">0</b><span>兼容性提示</span></div></div>
 <div class="receipt"><table><thead><tr><th>检查结果</th><th>变化位置</th><th>变化说明</th>
 </tr></thead><tbody><tr><td class="breaking">破坏风险</td><td><code>/observations/campaign-calendar/contract/blocks/0/shape/events/items/endDate</code></td><td>Previously observed output field is absent in the new sample.</td></tr><tr><td class="breaking">破坏风险</td><td><code>/observations/list-nutrition-foods/contract/blocks/0/representation</code></td><td>Response representation changed; parser selection may need updating.</td></tr><tr><td class="breaking">破坏风险</td><td><code>/observations/now-time-info/contract/structured/timestamp</code></td><td>Observed output type changed; adapters depending on the old type may fail.</td></tr></tbody></table></div>
-<footer>提取结构 → 比较变化 → 本地回放</footer>
 </main></body></html>
