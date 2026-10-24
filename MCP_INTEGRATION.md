@@ -74,4 +74,8 @@ mcreplay import private/export.json --out private/capture.json
 
 ## 验证记录
 
+2026-10-24 使用 MCP Inspector 2.12.0 连接官方端点，协商协议 `2025-06-18`，三项空参数查询均成功。完整结果分别经本地接收工具保存，再通过 MCP Python SDK 1.30.0 回放验证。活动日历同时提供 Markdown 文本和 `structuredContent`；时间与营养工具提供带 JSON 的 Markdown 及 `structuredContent`，其中营养 `data` 为字符串。
+
+实测时间、响应格式与复现步骤见 [官方实测记录](docs/LIVE_VERIFICATION.md)。
+
 本地协议测试通过标准 MCP SDK 客户端连接 stdio 服务，覆盖工具发现、调用、接收、回放及错误路径。详细结果和官方连接验证进度见 [QA 记录](docs/QA.md)，比较规则见 [支持范围](docs/limitations.md)。

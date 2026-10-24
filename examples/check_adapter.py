@@ -2,8 +2,8 @@
 
 Usage: python examples/check_adapter.py demo-output/before.json
        python examples/check_adapter.py demo-output/after.json  # exits 2
-The real official field schema has not been verified; these assertions belong to
-the demo adapter, not to McDonald's. No token or network access is used.
+This adapter checks the demo field at the root. The recorded official response
+uses data.timestamp; see check_recorded_structure.py for that workflow.
 """
 
 import asyncio

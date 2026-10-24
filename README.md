@@ -18,7 +18,7 @@
 - **本地接收工具与 Skill**：接收一次正常官方查询的结果，在内存中删除原值后写入文件。
 - **可用于 CI**：离线命令、明确退出码和独立 HTML 报告。
 
-支持的工具包括 `now-time-info`、`campaign-calendar`、`list-nutrition-foods`，详见 [MCP_INTEGRATION.md](MCP_INTEGRATION.md)。
+支持的工具包括 `now-time-info`、`campaign-calendar`、`list-nutrition-foods`。三项工具已于 2026-10-24 完成官方认证查询、结构提取与本地 MCP 回放验证，详见 [实测记录](docs/LIVE_VERIFICATION.md)。
 
 ## 30 秒离线试用
 
@@ -43,6 +43,16 @@ mcreplay compare demo-output/before.json demo-output/after.json
 可运行 `python examples/check_adapter.py demo-output/before.json` 查看独立 SDK 适配器通过；将文件换成 `after.json` 会检测到刻意加入的类型变化并退出 2。
 
 退出码：`0` 无变化或仅信息项；`2` 有破坏性风险；`3` 仅需人工复核；`1` 输入或执行失败。
+
+## 回放官方实测结构
+
+仓库附带由三项官方查询提取的结构样本，可直接运行：
+
+```bash
+python examples/check_recorded_structure.py
+```
+
+该检查通过标准 MCP 客户端完成三项样本的接收和回放，并验证时间、活动及营养响应的字段格式。
 
 ## 三个实际开发工作流
 

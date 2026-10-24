@@ -1,0 +1,2219 @@
+{
+  "format": "mcreplay/v1",
+  "source": "user-import",
+  "tools": [
+    {
+      "name": "campaign-calendar",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "specifiedDate": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    {
+      "name": "list-nutrition-foods",
+      "inputSchema": {
+        "type": "object",
+        "properties": {}
+      }
+    },
+    {
+      "name": "now-time-info",
+      "inputSchema": {
+        "type": "object",
+        "properties": {}
+      }
+    }
+  ],
+  "observations": [
+    {
+      "name": "campaign-calendar",
+      "arguments": {},
+      "response": {
+        "content": [
+          {
+            "type": "text",
+            "text": "[synthetic text]"
+          }
+        ],
+        "isError": false,
+        "structuredContent": {
+          "success": false,
+          "code": 0,
+          "message": "[synthetic]",
+          "datetime": "[synthetic]",
+          "traceId": "[synthetic]",
+          "data": {
+            "currentTime": "[synthetic]",
+            "dailyList": [
+              {
+                "date": "[synthetic]",
+                "dateText": "[synthetic]",
+                "events": [
+                  {
+                    "activityCode": "[synthetic]",
+                    "activityStage": 0,
+                    "eventType": 0,
+                    "subscribeScene": "[synthetic]",
+                    "resourceId": "[synthetic]",
+                    "position": "[synthetic]",
+                    "showStyle": 0,
+                    "activityTitle": "[synthetic]",
+                    "bannerTitleColor": "[synthetic]",
+                    "activityTag": "[synthetic]",
+                    "price": "[synthetic]",
+                    "priceSuffix": "[synthetic]",
+                    "activitySubTitle": "[synthetic]",
+                    "activityBgColor": "[synthetic]",
+                    "button": {
+                      "status": 0,
+                      "text": "[synthetic]",
+                      "color": "[synthetic]",
+                      "buttonStyle": 0
+                    },
+                    "articleDto": {
+                      "title": "[synthetic]",
+                      "content": "[synthetic]",
+                      "imgList": [
+                        "[synthetic]"
+                      ],
+                      "highlights": "[synthetic]",
+                      "buttonText": "[synthetic]",
+                      "buttonIcon": "[synthetic]",
+                      "appJumpUrl": "[synthetic]"
+                    },
+                    "showType": 0
+                  },
+                  {
+                    "activityCode": "[synthetic]",
+                    "activityStage": 0,
+                    "eventType": 0,
+                    "subscribeScene": "[synthetic]",
+                    "resourceId": "[synthetic]",
+                    "position": "[synthetic]",
+                    "showStyle": 0,
+                    "activityTitle": "[synthetic]",
+                    "bannerTitleColor": "[synthetic]",
+                    "activityTag": "[synthetic]",
+                    "price": "[synthetic]",
+                    "priceSuffix": "[synthetic]",
+                    "activitySubTitle": "[synthetic]",
+                    "activityBgColor": "[synthetic]",
+                    "button": {
+                      "status": 0,
+                      "text": "[synthetic]",
+                      "color": "[synthetic]",
+                      "buttonStyle": 0
+                    },
+                    "articleDto": {
+                      "title": "[synthetic]",
+                      "content": "[synthetic]",
+                      "imgList": [
+                        "[synthetic]"
+                      ],
+                      "highlights": "[synthetic]",
+                      "buttonText": "[synthetic]",
+                      "buttonIcon": "[synthetic]",
+                      "appJumpUrl": "[synthetic]"
+                    },
+                    "showType": 0
+                  },
+                  {
+                    "activityCode": "[synthetic]",
+                    "activityStage": 0,
+                    "eventType": 0,
+                    "subscribeScene": "[synthetic]",
+                    "resourceId": "[synthetic]",
+                    "position": "[synthetic]",
+                    "showStyle": 0,
+                    "activityTitle": "[synthetic]",
+                    "bannerTitleColor": "[synthetic]",
+                    "activityTag": "[synthetic]",
+                    "price": "[synthetic]",
+                    "priceSuffix": "[synthetic]",
+                    "activitySubTitle": "[synthetic]",
+                    "activityBgColor": "[synthetic]",
+                    "button": {
+                      "status": 0,
+                      "text": "[synthetic]",
+                      "color": "[synthetic]",
+                      "buttonStyle": 0
+                    },
+                    "articleDto": {
+                      "title": "[synthetic]",
+                      "content": "[synthetic]",
+                      "imgList": [
+                        "[synthetic]"
+                      ],
+                      "highlights": "[synthetic]",
+                      "buttonText": "[synthetic]",
+                      "buttonIcon": "[synthetic]",
+                      "appJumpUrl": "[synthetic]"
+                    },
+                    "showType": 0
+                  },
+                  {
+                    "activityCode": "[synthetic]",
+                    "activityStage": 0,
+                    "eventType": 0,
+                    "subscribeScene": "[synthetic]",
+                    "resourceId": "[synthetic]",
+                    "position": "[synthetic]",
+                    "showStyle": 0,
+                    "activityTitle": "[synthetic]",
+                    "bannerTitleColor": "[synthetic]",
+                    "activityTag": "[synthetic]",
+                    "price": "[synthetic]",
+                    "priceSuffix": "[synthetic]",
+                    "activitySubTitle": "[synthetic]",
+                    "activityBgColor": "[synthetic]",
+                    "button": {
+                      "status": 0,
+                      "text": "[synthetic]",
+                      "color": "[synthetic]",
+                      "buttonStyle": 0
+                    },
+                    "articleDto": {
+                      "title": "[synthetic]",
+                      "content": "[synthetic]",
+                      "imgList": [
+                        "[synthetic]"
+                      ],
+                      "highlights": "[synthetic]",
+                      "buttonText": "[synthetic]",
+                      "buttonIcon": "[synthetic]",
+                      "appJumpUrl": "[synthetic]"
+                    },
+                    "showType": 0
+                  },
+                  {
+                    "activityCode": "[synthetic]",
+                    "activityStage": 0,
+                    "eventType": 0,
+                    "subscribeScene": "[synthetic]",
+                    "resourceId": "[synthetic]",
+                    "position": "[synthetic]",
+                    "showStyle": 0,
+                    "activityTitle": "[synthetic]",
+                    "bannerTitleColor": "[synthetic]",
+                    "activityTag": "[synthetic]",
+                    "price": "[synthetic]",
+                    "priceSuffix": "[synthetic]",
+                    "activitySubTitle": "[synthetic]",
+                    "activityBgColor": "[synthetic]",
+                    "button": {
+                      "status": 0,
+                      "text": "[synthetic]",
+                      "color": "[synthetic]",
+                      "buttonStyle": 0
+                    },
+                    "articleDto": {
+                      "title": "[synthetic]",
+                      "content": "[synthetic]",
+                      "imgList": [
+                        "[synthetic]"
+                      ],
+                      "highlights": "[synthetic]",
+                      "buttonText": "[synthetic]",
+                      "buttonIcon": "[synthetic]",
+                      "appJumpUrl": "[synthetic]"
+                    },
+                    "showType": 0
+                  },
+                  {
+                    "activityCode": "[synthetic]",
+                    "activityStage": 0,
+                    "eventType": 0,
+                    "subscribeScene": "[synthetic]",
+                    "resourceId": "[synthetic]",
+                    "position": "[synthetic]",
+                    "showStyle": 0,
+                    "activityTitle": "[synthetic]",
+                    "bannerTitleColor": "[synthetic]",
+                    "activityTag": "[synthetic]",
+                    "price": "[synthetic]",
+                    "priceSuffix": "[synthetic]",
+                    "activitySubTitle": "[synthetic]",
+                    "activityBgColor": "[synthetic]",
+                    "button": {
+                      "status": 0,
+                      "themeColor": 0,
+                      "text": "[synthetic]",
+                      "subText": "[synthetic]",
+                      "color": "[synthetic]",
+                      "buttonStyle": 0
+                    },
+                    "articleDto": {
+                      "title": "[synthetic]",
+                      "content": "[synthetic]",
+                      "imgList": [
+                        "[synthetic]"
+                      ],
+                      "highlights": "[synthetic]",
+                      "buttonText": "[synthetic]",
+                      "buttonIcon": "[synthetic]",
+                      "appJumpUrl": "[synthetic]"
+                    },
+                    "showType": 0
+                  },
+                  {
+                    "activityCode": "[synthetic]",
+                    "activityStage": 0,
+                    "eventType": 0,
+                    "subscribeScene": "[synthetic]",
+                    "resourceId": "[synthetic]",
+                    "position": "[synthetic]",
+                    "showStyle": 0,
+                    "activityTitle": "[synthetic]",
+                    "bannerTitleColor": "[synthetic]",
+                    "activityTag": "[synthetic]",
+                    "price": "[synthetic]",
+                    "priceSuffix": "[synthetic]",
+                    "activitySubTitle": "[synthetic]",
+                    "activityBgColor": "[synthetic]",
+                    "button": {
+                      "status": 0,
+                      "themeColor": 0,
+                      "text": "[synthetic]",
+                      "subText": "[synthetic]",
+                      "color": "[synthetic]",
+                      "buttonStyle": 0
+                    },
+                    "articleDto": {
+                      "title": "[synthetic]",
+                      "content": "[synthetic]",
+                      "imgList": [
+                        "[synthetic]"
+                      ],
+                      "highlights": "[synthetic]",
+                      "buttonText": "[synthetic]",
+                      "buttonIcon": "[synthetic]",
+                      "appJumpUrl": "[synthetic]"
+                    },
+                    "showType": 0
+                  },
+                  {
+                    "activityCode": "[synthetic]",
+                    "activityStage": 0,
+                    "eventType": 0,
+                    "subscribeScene": "[synthetic]",
+                    "resourceId": "[synthetic]",
+                    "position": "[synthetic]",
+                    "showStyle": 0,
+                    "activityTitle": "[synthetic]",
+                    "bannerTitleColor": "[synthetic]",
+                    "activityTag": "[synthetic]",
+                    "price": "[synthetic]",
+                    "priceSuffix": "[synthetic]",
+                    "activitySubTitle": "[synthetic]",
+                    "activityBgColor": "[synthetic]",
+                    "button": {
+                      "status": 0,
+                      "text": "[synthetic]",
+                      "color": "[synthetic]",
+                      "buttonStyle": 0
+                    },
+                    "articleDto": {
+                      "title": "[synthetic]",
+                      "content": "[synthetic]",
+                      "imgList": [
+                        "[synthetic]"
+                      ],
+                      "highlights": "[synthetic]",
+                      "buttonText": "[synthetic]",
+                      "buttonIcon": "[synthetic]",
+                      "appJumpUrl": "[synthetic]"
+                    },
+                    "showType": 0
+                  },
+                  {
+                    "activityCode": "[synthetic]",
+                    "activityStage": 0,
+                    "eventType": 0,
+                    "subscribeScene": "[synthetic]",
+                    "resourceId": "[synthetic]",
+                    "position": "[synthetic]",
+                    "showStyle": 0,
+                    "activityTitle": "[synthetic]",
+                    "bannerTitleColor": "[synthetic]",
+                    "activityTag": "[synthetic]",
+                    "price": "[synthetic]",
+                    "priceSuffix": "[synthetic]",
+                    "activitySubTitle": "[synthetic]",
+                    "activityBgColor": "[synthetic]",
+                    "button": {
+                      "status": 0,
+                      "text": "[synthetic]",
+                      "color": "[synthetic]",
+                      "buttonStyle": 0
+                    },
+                    "articleDto": {
+                      "title": "[synthetic]",
+                      "content": "[synthetic]",
+                      "imgList": [
+                        "[synthetic]"
+                      ],
+                      "highlights": "[synthetic]",
+                      "buttonText": "[synthetic]",
+                      "buttonIcon": "[synthetic]",
+                      "appJumpUrl": "[synthetic]"
+                    },
+                    "showType": 0
+                  },
+                  {
+                    "activityCode": "[synthetic]",
+                    "activityStage": 0,
+                    "eventType": 0,
+                    "subscribeScene": "[synthetic]",
+                    "resourceId": "[synthetic]",
+                    "position": "[synthetic]",
+                    "showStyle": 0,
+                    "activityTitle": "[synthetic]",
+                    "bannerTitleColor": "[synthetic]",
+                    "activityTag": "[synthetic]",
+                    "price": "[synthetic]",
+                    "priceSuffix": "[synthetic]",
+                    "activitySubTitle": "[synthetic]",
+                    "activityBgColor": "[synthetic]",
+                    "button": {
+                      "status": 0,
+                      "text": "[synthetic]",
+                      "color": "[synthetic]",
+                      "buttonStyle": 0
+                    },
+                    "articleDto": {
+                      "title": "[synthetic]",
+                      "content": "[synthetic]",
+                      "imgList": [
+                        "[synthetic]"
+                      ],
+                      "highlights": "[synthetic]",
+                      "buttonText": "[synthetic]",
+                      "buttonIcon": "[synthetic]",
+                      "appJumpUrl": "[synthetic]"
+                    },
+                    "showType": 0
+                  },
+                  {
+                    "activityCode": "[synthetic]",
+                    "activityStage": 0,
+                    "eventType": 0,
+                    "subscribeScene": "[synthetic]",
+                    "resourceId": "[synthetic]",
+                    "position": "[synthetic]",
+                    "showStyle": 0,
+                    "activityTitle": "[synthetic]",
+                    "bannerTitleColor": "[synthetic]",
+                    "activityTag": "[synthetic]",
+                    "price": "[synthetic]",
+                    "priceSuffix": "[synthetic]",
+                    "activitySubTitle": "[synthetic]",
+                    "activityBgColor": "[synthetic]",
+                    "button": {
+                      "status": 0,
+                      "text": "[synthetic]",
+                      "color": "[synthetic]",
+                      "buttonStyle": 0
+                    },
+                    "articleDto": {
+                      "title": "[synthetic]",
+                      "content": "[synthetic]",
+                      "imgList": [
+                        "[synthetic]"
+                      ],
+                      "highlights": "[synthetic]",
+                      "buttonText": "[synthetic]",
+                      "buttonIcon": "[synthetic]",
+                      "appJumpUrl": "[synthetic]"
+                    },
+                    "showType": 0
+                  },
+                  {
+                    "activityCode": "[synthetic]",
+                    "activityStage": 0,
+                    "eventType": 0,
+                    "subscribeScene": "[synthetic]",
+                    "resourceId": "[synthetic]",
+                    "position": "[synthetic]",
+                    "showStyle": 0,
+                    "activityTitle": "[synthetic]",
+                    "bannerTitleColor": "[synthetic]",
+                    "activityTag": "[synthetic]",
+                    "price": "[synthetic]",
+                    "priceSuffix": "[synthetic]",
+                    "activitySubTitle": "[synthetic]",
+                    "activityBgColor": "[synthetic]",
+                    "button": {
+                      "status": 0,
+                      "text": "[synthetic]",
+                      "color": "[synthetic]",
+                      "buttonStyle": 0
+                    },
+                    "articleDto": {
+                      "title": "[synthetic]",
+                      "content": "[synthetic]",
+                      "imgList": [
+                        "[synthetic]"
+                      ],
+                      "highlights": "[synthetic]",
+                      "buttonText": "[synthetic]",
+                      "buttonIcon": "[synthetic]",
+                      "appJumpUrl": "[synthetic]"
+                    },
+                    "showType": 0
+                  },
+                  {
+                    "activityCode": "[synthetic]",
+                    "activityStage": 0,
+                    "eventType": 0,
+                    "subscribeScene": "[synthetic]",
+                    "resourceId": "[synthetic]",
+                    "position": "[synthetic]",
+                    "showStyle": 0,
+                    "activityTitle": "[synthetic]",
+                    "bannerTitleColor": "[synthetic]",
+                    "activityTag": "[synthetic]",
+                    "price": "[synthetic]",
+                    "priceSuffix": "[synthetic]",
+                    "activitySubTitle": "[synthetic]",
+                    "activityBgColor": "[synthetic]",
+                    "button": {
+                      "status": 0,
+                      "text": "[synthetic]",
+                      "color": "[synthetic]",
+                      "buttonStyle": 0
+                    },
+                    "articleDto": {
+                      "title": "[synthetic]",
+                      "content": "[synthetic]",
+                      "imgList": [
+                        "[synthetic]"
+                      ],
+                      "highlights": "[synthetic]",
+                      "buttonText": "[synthetic]",
+                      "buttonIcon": "[synthetic]",
+                      "appJumpUrl": "[synthetic]"
+                    },
+                    "showType": 0,
+                    "activityRule": "[synthetic]"
+                  }
+                ],
+                "today": false
+              },
+              {
+                "date": "[synthetic]",
+                "dateText": "[synthetic]",
+                "events": [
+                  {
+                    "activityCode": "[synthetic]",
+                    "activityStage": 0,
+                    "eventType": 0,
+                    "subscribeScene": "[synthetic]",
+                    "resourceId": "[synthetic]",
+                    "position": "[synthetic]",
+                    "showStyle": 0,
+                    "activityTitle": "[synthetic]",
+                    "bannerTitleColor": "[synthetic]",
+                    "activityTag": "[synthetic]",
+                    "price": "[synthetic]",
+                    "priceSuffix": "[synthetic]",
+                    "activitySubTitle": "[synthetic]",
+                    "activityBgColor": "[synthetic]",
+                    "button": {
+                      "status": 0,
+                      "themeColor": 0,
+                      "text": "[synthetic]",
+                      "color": "[synthetic]",
+                      "buttonStyle": 0
+                    },
+                    "articleDto": {
+                      "title": "[synthetic]",
+                      "content": "[synthetic]",
+                      "imgList": [
+                        "[synthetic]"
+                      ],
+                      "highlights": "[synthetic]",
+                      "heatValue": 0,
+                      "buttonText": "[synthetic]",
+                      "buttonIcon": "[synthetic]"
+                    },
+                    "showType": 0
+                  }
+                ],
+                "today": false
+              },
+              {
+                "date": "[synthetic]",
+                "dateText": "[synthetic]",
+                "events": [
+                  {
+                    "activityCode": "[synthetic]",
+                    "activityStage": 0,
+                    "eventType": 0,
+                    "subscribeScene": "[synthetic]",
+                    "resourceId": "[synthetic]",
+                    "position": "[synthetic]",
+                    "showStyle": 0,
+                    "activityTitle": "[synthetic]",
+                    "bannerTitleColor": "[synthetic]",
+                    "activityTag": "[synthetic]",
+                    "price": "[synthetic]",
+                    "priceSuffix": "[synthetic]",
+                    "activitySubTitle": "[synthetic]",
+                    "activityBgColor": "[synthetic]",
+                    "button": {
+                      "status": 0,
+                      "text": "[synthetic]",
+                      "color": "[synthetic]",
+                      "buttonStyle": 0
+                    },
+                    "articleDto": {
+                      "title": "[synthetic]",
+                      "content": "[synthetic]",
+                      "imgList": [
+                        "[synthetic]"
+                      ],
+                      "highlights": "[synthetic]",
+                      "buttonText": "[synthetic]",
+                      "buttonIcon": "[synthetic]",
+                      "appJumpUrl": "[synthetic]"
+                    },
+                    "showType": 0
+                  }
+                ],
+                "today": false
+              },
+              {
+                "date": "[synthetic]",
+                "dateText": "[synthetic]",
+                "events": [
+                  {
+                    "activityCode": "[synthetic]",
+                    "activityStage": 0,
+                    "eventType": 0,
+                    "subscribeScene": "[synthetic]",
+                    "resourceId": "[synthetic]",
+                    "position": "[synthetic]",
+                    "showStyle": 0,
+                    "activityTitle": "[synthetic]",
+                    "bannerTitleColor": "[synthetic]",
+                    "activityTag": "[synthetic]",
+                    "price": "[synthetic]",
+                    "priceSuffix": "[synthetic]",
+                    "activitySubTitle": "[synthetic]",
+                    "activityBgColor": "[synthetic]",
+                    "button": {
+                      "status": 0,
+                      "text": "[synthetic]",
+                      "color": "[synthetic]",
+                      "buttonStyle": 0
+                    },
+                    "articleDto": {
+                      "title": "[synthetic]",
+                      "content": "[synthetic]",
+                      "imgList": [
+                        "[synthetic]"
+                      ],
+                      "highlights": "[synthetic]",
+                      "buttonText": "[synthetic]",
+                      "buttonIcon": "[synthetic]",
+                      "appJumpUrl": "[synthetic]"
+                    },
+                    "showType": 0
+                  },
+                  {
+                    "activityCode": "[synthetic]",
+                    "activityStage": 0,
+                    "eventType": 0,
+                    "subscribeScene": "[synthetic]",
+                    "resourceId": "[synthetic]",
+                    "position": "[synthetic]",
+                    "showStyle": 0,
+                    "activityTitle": "[synthetic]",
+                    "bannerTitleColor": "[synthetic]",
+                    "activityTag": "[synthetic]",
+                    "price": "[synthetic]",
+                    "priceSuffix": "[synthetic]",
+                    "activitySubTitle": "[synthetic]",
+                    "activityBgColor": "[synthetic]",
+                    "button": {
+                      "status": 0,
+                      "themeColor": 0,
+                      "text": "[synthetic]",
+                      "subText": "[synthetic]",
+                      "color": "[synthetic]",
+                      "buttonStyle": 0
+                    },
+                    "articleDto": {
+                      "title": "[synthetic]",
+                      "content": "[synthetic]",
+                      "imgList": [
+                        "[synthetic]"
+                      ],
+                      "highlights": "[synthetic]",
+                      "buttonText": "[synthetic]",
+                      "buttonIcon": "[synthetic]",
+                      "appJumpUrl": "[synthetic]"
+                    },
+                    "showType": 0
+                  }
+                ],
+                "today": false
+              },
+              {
+                "date": "[synthetic]",
+                "dateText": "[synthetic]",
+                "events": [
+                  {
+                    "activityCode": "[synthetic]",
+                    "activityStage": 0,
+                    "eventType": 0,
+                    "subscribeScene": "[synthetic]",
+                    "resourceId": "[synthetic]",
+                    "position": "[synthetic]",
+                    "showStyle": 0,
+                    "activityTitle": "[synthetic]",
+                    "bannerTitleColor": "[synthetic]",
+                    "activityTag": "[synthetic]",
+                    "price": "[synthetic]",
+                    "priceSuffix": "[synthetic]",
+                    "activitySubTitle": "[synthetic]",
+                    "activityBgColor": "[synthetic]",
+                    "button": {
+                      "status": 0,
+                      "text": "[synthetic]",
+                      "color": "[synthetic]",
+                      "buttonStyle": 0
+                    },
+                    "articleDto": {
+                      "title": "[synthetic]",
+                      "content": "[synthetic]",
+                      "imgList": [
+                        "[synthetic]"
+                      ],
+                      "highlights": "[synthetic]",
+                      "buttonText": "[synthetic]",
+                      "buttonIcon": "[synthetic]",
+                      "appJumpUrl": "[synthetic]"
+                    },
+                    "showType": 0
+                  }
+                ],
+                "today": false
+              },
+              {
+                "date": "[synthetic]",
+                "dateText": "[synthetic]",
+                "events": [
+                  {
+                    "activityCode": "[synthetic]",
+                    "activityStage": 0,
+                    "eventType": 0,
+                    "subscribeScene": "[synthetic]",
+                    "resourceId": "[synthetic]",
+                    "position": "[synthetic]",
+                    "showStyle": 0,
+                    "activityTitle": "[synthetic]",
+                    "bannerTitleColor": "[synthetic]",
+                    "activityTag": "[synthetic]",
+                    "price": "[synthetic]",
+                    "priceSuffix": "[synthetic]",
+                    "activitySubTitle": "[synthetic]",
+                    "activityBgColor": "[synthetic]",
+                    "button": {
+                      "status": 0,
+                      "text": "[synthetic]",
+                      "color": "[synthetic]",
+                      "buttonStyle": 0
+                    },
+                    "articleDto": {
+                      "title": "[synthetic]",
+                      "content": "[synthetic]",
+                      "imgList": [
+                        "[synthetic]"
+                      ],
+                      "highlights": "[synthetic]",
+                      "buttonText": "[synthetic]",
+                      "buttonIcon": "[synthetic]",
+                      "appJumpUrl": "[synthetic]"
+                    },
+                    "showType": 0
+                  },
+                  {
+                    "activityCode": "[synthetic]",
+                    "activityStage": 0,
+                    "eventType": 0,
+                    "subscribeScene": "[synthetic]",
+                    "resourceId": "[synthetic]",
+                    "position": "[synthetic]",
+                    "showStyle": 0,
+                    "activityTitle": "[synthetic]",
+                    "bannerTitleColor": "[synthetic]",
+                    "activityTag": "[synthetic]",
+                    "price": "[synthetic]",
+                    "priceSuffix": "[synthetic]",
+                    "activitySubTitle": "[synthetic]",
+                    "activityBgColor": "[synthetic]",
+                    "button": {
+                      "status": 0,
+                      "text": "[synthetic]",
+                      "color": "[synthetic]",
+                      "buttonStyle": 0
+                    },
+                    "articleDto": {
+                      "title": "[synthetic]",
+                      "content": "[synthetic]",
+                      "imgList": [
+                        "[synthetic]"
+                      ],
+                      "highlights": "[synthetic]",
+                      "buttonText": "[synthetic]",
+                      "buttonIcon": "[synthetic]",
+                      "appJumpUrl": "[synthetic]"
+                    },
+                    "showType": 0
+                  }
+                ],
+                "today": false
+              },
+              {
+                "date": "[synthetic]",
+                "dateText": "[synthetic]",
+                "events": [
+                  {
+                    "activityCode": "[synthetic]",
+                    "activityStage": 0,
+                    "eventType": 0,
+                    "subscribeScene": "[synthetic]",
+                    "resourceId": "[synthetic]",
+                    "position": "[synthetic]",
+                    "showStyle": 0,
+                    "activityTitle": "[synthetic]",
+                    "bannerTitleColor": "[synthetic]",
+                    "activityTag": "[synthetic]",
+                    "price": "[synthetic]",
+                    "priceSuffix": "[synthetic]",
+                    "activitySubTitle": "[synthetic]",
+                    "activityBgColor": "[synthetic]",
+                    "button": {
+                      "status": 0,
+                      "text": "[synthetic]",
+                      "color": "[synthetic]",
+                      "buttonStyle": 0
+                    },
+                    "articleDto": {
+                      "title": "[synthetic]",
+                      "content": "[synthetic]",
+                      "imgList": [
+                        "[synthetic]"
+                      ],
+                      "highlights": "[synthetic]",
+                      "buttonText": "[synthetic]",
+                      "buttonIcon": "[synthetic]",
+                      "appJumpUrl": "[synthetic]"
+                    },
+                    "showType": 0
+                  }
+                ],
+                "today": false
+              },
+              {
+                "date": "[synthetic]",
+                "dateText": "[synthetic]",
+                "events": [
+                  {
+                    "activityCode": "[synthetic]",
+                    "activityStage": 0,
+                    "eventType": 0,
+                    "subscribeScene": "[synthetic]",
+                    "resourceId": "[synthetic]",
+                    "position": "[synthetic]",
+                    "showStyle": 0,
+                    "activityTitle": "[synthetic]",
+                    "bannerTitleColor": "[synthetic]",
+                    "activityTag": "[synthetic]",
+                    "price": "[synthetic]",
+                    "priceSuffix": "[synthetic]",
+                    "activitySubTitle": "[synthetic]",
+                    "activityBgColor": "[synthetic]",
+                    "button": {
+                      "status": 0,
+                      "text": "[synthetic]",
+                      "color": "[synthetic]",
+                      "buttonStyle": 0
+                    },
+                    "articleDto": {
+                      "title": "[synthetic]",
+                      "content": "[synthetic]",
+                      "imgList": [
+                        "[synthetic]"
+                      ],
+                      "highlights": "[synthetic]",
+                      "buttonText": "[synthetic]",
+                      "buttonIcon": "[synthetic]",
+                      "appJumpUrl": "[synthetic]"
+                    },
+                    "showType": 0
+                  }
+                ],
+                "today": false
+              },
+              {
+                "date": "[synthetic]",
+                "dateText": "[synthetic]",
+                "events": [
+                  {
+                    "activityCode": "[synthetic]",
+                    "activityStage": 0,
+                    "eventType": 0,
+                    "subscribeScene": "[synthetic]",
+                    "resourceId": "[synthetic]",
+                    "position": "[synthetic]",
+                    "showStyle": 0,
+                    "activityTitle": "[synthetic]",
+                    "bannerTitleColor": "[synthetic]",
+                    "activityTag": "[synthetic]",
+                    "price": "[synthetic]",
+                    "priceSuffix": "[synthetic]",
+                    "activitySubTitle": "[synthetic]",
+                    "activityBgColor": "[synthetic]",
+                    "button": {
+                      "status": 0,
+                      "text": "[synthetic]",
+                      "color": "[synthetic]",
+                      "buttonStyle": 0
+                    },
+                    "articleDto": {
+                      "title": "[synthetic]",
+                      "content": "[synthetic]",
+                      "imgList": [
+                        "[synthetic]"
+                      ],
+                      "highlights": "[synthetic]",
+                      "buttonText": "[synthetic]",
+                      "buttonIcon": "[synthetic]",
+                      "appJumpUrl": "[synthetic]"
+                    },
+                    "showType": 0,
+                    "activityRule": "[synthetic]"
+                  }
+                ],
+                "today": false
+              },
+              {
+                "date": "[synthetic]",
+                "dateText": "[synthetic]",
+                "events": [
+                  {
+                    "activityCode": "[synthetic]",
+                    "activityStage": 0,
+                    "eventType": 0,
+                    "subscribeScene": "[synthetic]",
+                    "resourceId": "[synthetic]",
+                    "position": "[synthetic]",
+                    "showStyle": 0,
+                    "activityTitle": "[synthetic]",
+                    "bannerTitleColor": "[synthetic]",
+                    "activityTag": "[synthetic]",
+                    "price": "[synthetic]",
+                    "priceSuffix": "[synthetic]",
+                    "activitySubTitle": "[synthetic]",
+                    "activityBgColor": "[synthetic]",
+                    "button": {
+                      "status": 0,
+                      "text": "[synthetic]",
+                      "color": "[synthetic]",
+                      "buttonStyle": 0
+                    },
+                    "articleDto": {
+                      "title": "[synthetic]",
+                      "content": "[synthetic]",
+                      "imgList": [
+                        "[synthetic]"
+                      ],
+                      "highlights": "[synthetic]",
+                      "buttonText": "[synthetic]",
+                      "buttonIcon": "[synthetic]",
+                      "appJumpUrl": "[synthetic]"
+                    },
+                    "showType": 0
+                  }
+                ],
+                "today": false
+              }
+            ],
+            "subscribedEvents": []
+          }
+        }
+      },
+      "contract": {
+        "envelope": {
+          "type": "object",
+          "properties": {
+            "content": {
+              "type": "array",
+              "items": [
+                {
+                  "properties": {
+                    "text": {
+                      "type": "string"
+                    },
+                    "type": {
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                }
+              ]
+            },
+            "isError": {
+              "type": "boolean"
+            },
+            "structuredContent": {
+              "type": "object",
+              "properties": {}
+            }
+          }
+        },
+        "blocks": [
+          {
+            "representation": "text",
+            "shape": null
+          }
+        ],
+        "structured": {
+          "type": "object",
+          "properties": {
+            "code": {
+              "type": "integer"
+            },
+            "data": {
+              "type": "object",
+              "properties": {
+                "currentTime": {
+                  "type": "string"
+                },
+                "dailyList": {
+                  "type": "array",
+                  "items": [
+                    {
+                      "properties": {
+                        "date": {
+                          "type": "string"
+                        },
+                        "dateText": {
+                          "type": "string"
+                        },
+                        "events": {
+                          "items": [
+                            {
+                              "properties": {
+                                "activityBgColor": {
+                                  "type": "string"
+                                },
+                                "activityCode": {
+                                  "type": "string"
+                                },
+                                "activityRule": {
+                                  "type": "string"
+                                },
+                                "activityStage": {
+                                  "type": "integer"
+                                },
+                                "activitySubTitle": {
+                                  "type": "string"
+                                },
+                                "activityTag": {
+                                  "type": "string"
+                                },
+                                "activityTitle": {
+                                  "type": "string"
+                                },
+                                "articleDto": {
+                                  "properties": {
+                                    "appJumpUrl": {
+                                      "type": "string"
+                                    },
+                                    "buttonIcon": {
+                                      "type": "string"
+                                    },
+                                    "buttonText": {
+                                      "type": "string"
+                                    },
+                                    "content": {
+                                      "type": "string"
+                                    },
+                                    "highlights": {
+                                      "type": "string"
+                                    },
+                                    "imgList": {
+                                      "items": [
+                                        {
+                                          "type": "string"
+                                        }
+                                      ],
+                                      "type": "array"
+                                    },
+                                    "title": {
+                                      "type": "string"
+                                    }
+                                  },
+                                  "type": "object"
+                                },
+                                "bannerTitleColor": {
+                                  "type": "string"
+                                },
+                                "button": {
+                                  "properties": {
+                                    "buttonStyle": {
+                                      "type": "integer"
+                                    },
+                                    "color": {
+                                      "type": "string"
+                                    },
+                                    "status": {
+                                      "type": "integer"
+                                    },
+                                    "text": {
+                                      "type": "string"
+                                    }
+                                  },
+                                  "type": "object"
+                                },
+                                "eventType": {
+                                  "type": "integer"
+                                },
+                                "position": {
+                                  "type": "string"
+                                },
+                                "price": {
+                                  "type": "string"
+                                },
+                                "priceSuffix": {
+                                  "type": "string"
+                                },
+                                "resourceId": {
+                                  "type": "string"
+                                },
+                                "showStyle": {
+                                  "type": "integer"
+                                },
+                                "showType": {
+                                  "type": "integer"
+                                },
+                                "subscribeScene": {
+                                  "type": "string"
+                                }
+                              },
+                              "type": "object"
+                            },
+                            {
+                              "properties": {
+                                "activityBgColor": {
+                                  "type": "string"
+                                },
+                                "activityCode": {
+                                  "type": "string"
+                                },
+                                "activityStage": {
+                                  "type": "integer"
+                                },
+                                "activitySubTitle": {
+                                  "type": "string"
+                                },
+                                "activityTag": {
+                                  "type": "string"
+                                },
+                                "activityTitle": {
+                                  "type": "string"
+                                },
+                                "articleDto": {
+                                  "properties": {
+                                    "appJumpUrl": {
+                                      "type": "string"
+                                    },
+                                    "buttonIcon": {
+                                      "type": "string"
+                                    },
+                                    "buttonText": {
+                                      "type": "string"
+                                    },
+                                    "content": {
+                                      "type": "string"
+                                    },
+                                    "highlights": {
+                                      "type": "string"
+                                    },
+                                    "imgList": {
+                                      "items": [
+                                        {
+                                          "type": "string"
+                                        }
+                                      ],
+                                      "type": "array"
+                                    },
+                                    "title": {
+                                      "type": "string"
+                                    }
+                                  },
+                                  "type": "object"
+                                },
+                                "bannerTitleColor": {
+                                  "type": "string"
+                                },
+                                "button": {
+                                  "properties": {
+                                    "buttonStyle": {
+                                      "type": "integer"
+                                    },
+                                    "color": {
+                                      "type": "string"
+                                    },
+                                    "status": {
+                                      "type": "integer"
+                                    },
+                                    "subText": {
+                                      "type": "string"
+                                    },
+                                    "text": {
+                                      "type": "string"
+                                    },
+                                    "themeColor": {
+                                      "type": "integer"
+                                    }
+                                  },
+                                  "type": "object"
+                                },
+                                "eventType": {
+                                  "type": "integer"
+                                },
+                                "position": {
+                                  "type": "string"
+                                },
+                                "price": {
+                                  "type": "string"
+                                },
+                                "priceSuffix": {
+                                  "type": "string"
+                                },
+                                "resourceId": {
+                                  "type": "string"
+                                },
+                                "showStyle": {
+                                  "type": "integer"
+                                },
+                                "showType": {
+                                  "type": "integer"
+                                },
+                                "subscribeScene": {
+                                  "type": "string"
+                                }
+                              },
+                              "type": "object"
+                            },
+                            {
+                              "properties": {
+                                "activityBgColor": {
+                                  "type": "string"
+                                },
+                                "activityCode": {
+                                  "type": "string"
+                                },
+                                "activityStage": {
+                                  "type": "integer"
+                                },
+                                "activitySubTitle": {
+                                  "type": "string"
+                                },
+                                "activityTag": {
+                                  "type": "string"
+                                },
+                                "activityTitle": {
+                                  "type": "string"
+                                },
+                                "articleDto": {
+                                  "properties": {
+                                    "appJumpUrl": {
+                                      "type": "string"
+                                    },
+                                    "buttonIcon": {
+                                      "type": "string"
+                                    },
+                                    "buttonText": {
+                                      "type": "string"
+                                    },
+                                    "content": {
+                                      "type": "string"
+                                    },
+                                    "highlights": {
+                                      "type": "string"
+                                    },
+                                    "imgList": {
+                                      "items": [
+                                        {
+                                          "type": "string"
+                                        }
+                                      ],
+                                      "type": "array"
+                                    },
+                                    "title": {
+                                      "type": "string"
+                                    }
+                                  },
+                                  "type": "object"
+                                },
+                                "bannerTitleColor": {
+                                  "type": "string"
+                                },
+                                "button": {
+                                  "properties": {
+                                    "buttonStyle": {
+                                      "type": "integer"
+                                    },
+                                    "color": {
+                                      "type": "string"
+                                    },
+                                    "status": {
+                                      "type": "integer"
+                                    },
+                                    "text": {
+                                      "type": "string"
+                                    }
+                                  },
+                                  "type": "object"
+                                },
+                                "eventType": {
+                                  "type": "integer"
+                                },
+                                "position": {
+                                  "type": "string"
+                                },
+                                "price": {
+                                  "type": "string"
+                                },
+                                "priceSuffix": {
+                                  "type": "string"
+                                },
+                                "resourceId": {
+                                  "type": "string"
+                                },
+                                "showStyle": {
+                                  "type": "integer"
+                                },
+                                "showType": {
+                                  "type": "integer"
+                                },
+                                "subscribeScene": {
+                                  "type": "string"
+                                }
+                              },
+                              "type": "object"
+                            }
+                          ],
+                          "type": "array"
+                        },
+                        "today": {
+                          "type": "boolean"
+                        }
+                      },
+                      "type": "object"
+                    },
+                    {
+                      "properties": {
+                        "date": {
+                          "type": "string"
+                        },
+                        "dateText": {
+                          "type": "string"
+                        },
+                        "events": {
+                          "items": [
+                            {
+                              "properties": {
+                                "activityBgColor": {
+                                  "type": "string"
+                                },
+                                "activityCode": {
+                                  "type": "string"
+                                },
+                                "activityRule": {
+                                  "type": "string"
+                                },
+                                "activityStage": {
+                                  "type": "integer"
+                                },
+                                "activitySubTitle": {
+                                  "type": "string"
+                                },
+                                "activityTag": {
+                                  "type": "string"
+                                },
+                                "activityTitle": {
+                                  "type": "string"
+                                },
+                                "articleDto": {
+                                  "properties": {
+                                    "appJumpUrl": {
+                                      "type": "string"
+                                    },
+                                    "buttonIcon": {
+                                      "type": "string"
+                                    },
+                                    "buttonText": {
+                                      "type": "string"
+                                    },
+                                    "content": {
+                                      "type": "string"
+                                    },
+                                    "highlights": {
+                                      "type": "string"
+                                    },
+                                    "imgList": {
+                                      "items": [
+                                        {
+                                          "type": "string"
+                                        }
+                                      ],
+                                      "type": "array"
+                                    },
+                                    "title": {
+                                      "type": "string"
+                                    }
+                                  },
+                                  "type": "object"
+                                },
+                                "bannerTitleColor": {
+                                  "type": "string"
+                                },
+                                "button": {
+                                  "properties": {
+                                    "buttonStyle": {
+                                      "type": "integer"
+                                    },
+                                    "color": {
+                                      "type": "string"
+                                    },
+                                    "status": {
+                                      "type": "integer"
+                                    },
+                                    "text": {
+                                      "type": "string"
+                                    }
+                                  },
+                                  "type": "object"
+                                },
+                                "eventType": {
+                                  "type": "integer"
+                                },
+                                "position": {
+                                  "type": "string"
+                                },
+                                "price": {
+                                  "type": "string"
+                                },
+                                "priceSuffix": {
+                                  "type": "string"
+                                },
+                                "resourceId": {
+                                  "type": "string"
+                                },
+                                "showStyle": {
+                                  "type": "integer"
+                                },
+                                "showType": {
+                                  "type": "integer"
+                                },
+                                "subscribeScene": {
+                                  "type": "string"
+                                }
+                              },
+                              "type": "object"
+                            }
+                          ],
+                          "type": "array"
+                        },
+                        "today": {
+                          "type": "boolean"
+                        }
+                      },
+                      "type": "object"
+                    },
+                    {
+                      "properties": {
+                        "date": {
+                          "type": "string"
+                        },
+                        "dateText": {
+                          "type": "string"
+                        },
+                        "events": {
+                          "items": [
+                            {
+                              "properties": {
+                                "activityBgColor": {
+                                  "type": "string"
+                                },
+                                "activityCode": {
+                                  "type": "string"
+                                },
+                                "activityStage": {
+                                  "type": "integer"
+                                },
+                                "activitySubTitle": {
+                                  "type": "string"
+                                },
+                                "activityTag": {
+                                  "type": "string"
+                                },
+                                "activityTitle": {
+                                  "type": "string"
+                                },
+                                "articleDto": {
+                                  "properties": {
+                                    "appJumpUrl": {
+                                      "type": "string"
+                                    },
+                                    "buttonIcon": {
+                                      "type": "string"
+                                    },
+                                    "buttonText": {
+                                      "type": "string"
+                                    },
+                                    "content": {
+                                      "type": "string"
+                                    },
+                                    "highlights": {
+                                      "type": "string"
+                                    },
+                                    "imgList": {
+                                      "items": [
+                                        {
+                                          "type": "string"
+                                        }
+                                      ],
+                                      "type": "array"
+                                    },
+                                    "title": {
+                                      "type": "string"
+                                    }
+                                  },
+                                  "type": "object"
+                                },
+                                "bannerTitleColor": {
+                                  "type": "string"
+                                },
+                                "button": {
+                                  "properties": {
+                                    "buttonStyle": {
+                                      "type": "integer"
+                                    },
+                                    "color": {
+                                      "type": "string"
+                                    },
+                                    "status": {
+                                      "type": "integer"
+                                    },
+                                    "subText": {
+                                      "type": "string"
+                                    },
+                                    "text": {
+                                      "type": "string"
+                                    },
+                                    "themeColor": {
+                                      "type": "integer"
+                                    }
+                                  },
+                                  "type": "object"
+                                },
+                                "eventType": {
+                                  "type": "integer"
+                                },
+                                "position": {
+                                  "type": "string"
+                                },
+                                "price": {
+                                  "type": "string"
+                                },
+                                "priceSuffix": {
+                                  "type": "string"
+                                },
+                                "resourceId": {
+                                  "type": "string"
+                                },
+                                "showStyle": {
+                                  "type": "integer"
+                                },
+                                "showType": {
+                                  "type": "integer"
+                                },
+                                "subscribeScene": {
+                                  "type": "string"
+                                }
+                              },
+                              "type": "object"
+                            },
+                            {
+                              "properties": {
+                                "activityBgColor": {
+                                  "type": "string"
+                                },
+                                "activityCode": {
+                                  "type": "string"
+                                },
+                                "activityStage": {
+                                  "type": "integer"
+                                },
+                                "activitySubTitle": {
+                                  "type": "string"
+                                },
+                                "activityTag": {
+                                  "type": "string"
+                                },
+                                "activityTitle": {
+                                  "type": "string"
+                                },
+                                "articleDto": {
+                                  "properties": {
+                                    "appJumpUrl": {
+                                      "type": "string"
+                                    },
+                                    "buttonIcon": {
+                                      "type": "string"
+                                    },
+                                    "buttonText": {
+                                      "type": "string"
+                                    },
+                                    "content": {
+                                      "type": "string"
+                                    },
+                                    "highlights": {
+                                      "type": "string"
+                                    },
+                                    "imgList": {
+                                      "items": [
+                                        {
+                                          "type": "string"
+                                        }
+                                      ],
+                                      "type": "array"
+                                    },
+                                    "title": {
+                                      "type": "string"
+                                    }
+                                  },
+                                  "type": "object"
+                                },
+                                "bannerTitleColor": {
+                                  "type": "string"
+                                },
+                                "button": {
+                                  "properties": {
+                                    "buttonStyle": {
+                                      "type": "integer"
+                                    },
+                                    "color": {
+                                      "type": "string"
+                                    },
+                                    "status": {
+                                      "type": "integer"
+                                    },
+                                    "text": {
+                                      "type": "string"
+                                    }
+                                  },
+                                  "type": "object"
+                                },
+                                "eventType": {
+                                  "type": "integer"
+                                },
+                                "position": {
+                                  "type": "string"
+                                },
+                                "price": {
+                                  "type": "string"
+                                },
+                                "priceSuffix": {
+                                  "type": "string"
+                                },
+                                "resourceId": {
+                                  "type": "string"
+                                },
+                                "showStyle": {
+                                  "type": "integer"
+                                },
+                                "showType": {
+                                  "type": "integer"
+                                },
+                                "subscribeScene": {
+                                  "type": "string"
+                                }
+                              },
+                              "type": "object"
+                            }
+                          ],
+                          "type": "array"
+                        },
+                        "today": {
+                          "type": "boolean"
+                        }
+                      },
+                      "type": "object"
+                    },
+                    {
+                      "properties": {
+                        "date": {
+                          "type": "string"
+                        },
+                        "dateText": {
+                          "type": "string"
+                        },
+                        "events": {
+                          "items": [
+                            {
+                              "properties": {
+                                "activityBgColor": {
+                                  "type": "string"
+                                },
+                                "activityCode": {
+                                  "type": "string"
+                                },
+                                "activityStage": {
+                                  "type": "integer"
+                                },
+                                "activitySubTitle": {
+                                  "type": "string"
+                                },
+                                "activityTag": {
+                                  "type": "string"
+                                },
+                                "activityTitle": {
+                                  "type": "string"
+                                },
+                                "articleDto": {
+                                  "properties": {
+                                    "appJumpUrl": {
+                                      "type": "string"
+                                    },
+                                    "buttonIcon": {
+                                      "type": "string"
+                                    },
+                                    "buttonText": {
+                                      "type": "string"
+                                    },
+                                    "content": {
+                                      "type": "string"
+                                    },
+                                    "highlights": {
+                                      "type": "string"
+                                    },
+                                    "imgList": {
+                                      "items": [
+                                        {
+                                          "type": "string"
+                                        }
+                                      ],
+                                      "type": "array"
+                                    },
+                                    "title": {
+                                      "type": "string"
+                                    }
+                                  },
+                                  "type": "object"
+                                },
+                                "bannerTitleColor": {
+                                  "type": "string"
+                                },
+                                "button": {
+                                  "properties": {
+                                    "buttonStyle": {
+                                      "type": "integer"
+                                    },
+                                    "color": {
+                                      "type": "string"
+                                    },
+                                    "status": {
+                                      "type": "integer"
+                                    },
+                                    "text": {
+                                      "type": "string"
+                                    }
+                                  },
+                                  "type": "object"
+                                },
+                                "eventType": {
+                                  "type": "integer"
+                                },
+                                "position": {
+                                  "type": "string"
+                                },
+                                "price": {
+                                  "type": "string"
+                                },
+                                "priceSuffix": {
+                                  "type": "string"
+                                },
+                                "resourceId": {
+                                  "type": "string"
+                                },
+                                "showStyle": {
+                                  "type": "integer"
+                                },
+                                "showType": {
+                                  "type": "integer"
+                                },
+                                "subscribeScene": {
+                                  "type": "string"
+                                }
+                              },
+                              "type": "object"
+                            }
+                          ],
+                          "type": "array"
+                        },
+                        "today": {
+                          "type": "boolean"
+                        }
+                      },
+                      "type": "object"
+                    },
+                    {
+                      "properties": {
+                        "date": {
+                          "type": "string"
+                        },
+                        "dateText": {
+                          "type": "string"
+                        },
+                        "events": {
+                          "items": [
+                            {
+                              "properties": {
+                                "activityBgColor": {
+                                  "type": "string"
+                                },
+                                "activityCode": {
+                                  "type": "string"
+                                },
+                                "activityStage": {
+                                  "type": "integer"
+                                },
+                                "activitySubTitle": {
+                                  "type": "string"
+                                },
+                                "activityTag": {
+                                  "type": "string"
+                                },
+                                "activityTitle": {
+                                  "type": "string"
+                                },
+                                "articleDto": {
+                                  "properties": {
+                                    "buttonIcon": {
+                                      "type": "string"
+                                    },
+                                    "buttonText": {
+                                      "type": "string"
+                                    },
+                                    "content": {
+                                      "type": "string"
+                                    },
+                                    "heatValue": {
+                                      "type": "integer"
+                                    },
+                                    "highlights": {
+                                      "type": "string"
+                                    },
+                                    "imgList": {
+                                      "items": [
+                                        {
+                                          "type": "string"
+                                        }
+                                      ],
+                                      "type": "array"
+                                    },
+                                    "title": {
+                                      "type": "string"
+                                    }
+                                  },
+                                  "type": "object"
+                                },
+                                "bannerTitleColor": {
+                                  "type": "string"
+                                },
+                                "button": {
+                                  "properties": {
+                                    "buttonStyle": {
+                                      "type": "integer"
+                                    },
+                                    "color": {
+                                      "type": "string"
+                                    },
+                                    "status": {
+                                      "type": "integer"
+                                    },
+                                    "text": {
+                                      "type": "string"
+                                    },
+                                    "themeColor": {
+                                      "type": "integer"
+                                    }
+                                  },
+                                  "type": "object"
+                                },
+                                "eventType": {
+                                  "type": "integer"
+                                },
+                                "position": {
+                                  "type": "string"
+                                },
+                                "price": {
+                                  "type": "string"
+                                },
+                                "priceSuffix": {
+                                  "type": "string"
+                                },
+                                "resourceId": {
+                                  "type": "string"
+                                },
+                                "showStyle": {
+                                  "type": "integer"
+                                },
+                                "showType": {
+                                  "type": "integer"
+                                },
+                                "subscribeScene": {
+                                  "type": "string"
+                                }
+                              },
+                              "type": "object"
+                            }
+                          ],
+                          "type": "array"
+                        },
+                        "today": {
+                          "type": "boolean"
+                        }
+                      },
+                      "type": "object"
+                    }
+                  ]
+                },
+                "subscribedEvents": {
+                  "type": "array",
+                  "items": []
+                }
+              }
+            },
+            "datetime": {
+              "type": "string"
+            },
+            "message": {
+              "type": "string"
+            },
+            "success": {
+              "type": "boolean"
+            },
+            "traceId": {
+              "type": "string"
+            }
+          }
+        },
+        "isError": false,
+        "redactedKeys": 0
+      }
+    },
+    {
+      "name": "list-nutrition-foods",
+      "arguments": {},
+      "response": {
+        "content": [
+          {
+            "type": "text",
+            "text": "## Original Response\n{\"success\":false,\"code\":0,\"message\":\"[synthetic]\",\"datetime\":\"[synthetic]\",\"traceId\":\"[synthetic]\",\"data\":\"[synthetic]\"}"
+          }
+        ],
+        "isError": false,
+        "structuredContent": {
+          "success": false,
+          "code": 0,
+          "message": "[synthetic]",
+          "datetime": "[synthetic]",
+          "traceId": "[synthetic]",
+          "data": "[synthetic]"
+        }
+      },
+      "contract": {
+        "envelope": {
+          "type": "object",
+          "properties": {
+            "content": {
+              "type": "array",
+              "items": [
+                {
+                  "properties": {
+                    "text": {
+                      "type": "string"
+                    },
+                    "type": {
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                }
+              ]
+            },
+            "isError": {
+              "type": "boolean"
+            },
+            "structuredContent": {
+              "type": "object",
+              "properties": {}
+            }
+          }
+        },
+        "blocks": [
+          {
+            "representation": "markdown-json",
+            "shape": {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "type": "integer"
+                },
+                "data": {
+                  "type": "string"
+                },
+                "datetime": {
+                  "type": "string"
+                },
+                "message": {
+                  "type": "string"
+                },
+                "success": {
+                  "type": "boolean"
+                },
+                "traceId": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ],
+        "structured": {
+          "type": "object",
+          "properties": {
+            "code": {
+              "type": "integer"
+            },
+            "data": {
+              "type": "string"
+            },
+            "datetime": {
+              "type": "string"
+            },
+            "message": {
+              "type": "string"
+            },
+            "success": {
+              "type": "boolean"
+            },
+            "traceId": {
+              "type": "string"
+            }
+          }
+        },
+        "isError": false,
+        "redactedKeys": 0
+      }
+    },
+    {
+      "name": "now-time-info",
+      "arguments": {},
+      "response": {
+        "content": [
+          {
+            "type": "text",
+            "text": "## Original Response\n{\"success\":false,\"code\":0,\"message\":\"[synthetic]\",\"datetime\":\"[synthetic]\",\"traceId\":\"[synthetic]\",\"data\":{\"timestamp\":0,\"datetime\":\"[synthetic]\",\"formatted\":\"[synthetic]\",\"date\":\"[synthetic]\",\"year\":0,\"month\":0,\"day\":0,\"dayOfWeek\":\"[synthetic]\",\"timezone\":\"[synthetic]\",\"offset\":\"[synthetic]\",\"utc\":\"[synthetic]\"}}"
+          }
+        ],
+        "isError": false,
+        "structuredContent": {
+          "success": false,
+          "code": 0,
+          "message": "[synthetic]",
+          "datetime": "[synthetic]",
+          "traceId": "[synthetic]",
+          "data": {
+            "timestamp": 0,
+            "datetime": "[synthetic]",
+            "formatted": "[synthetic]",
+            "date": "[synthetic]",
+            "year": 0,
+            "month": 0,
+            "day": 0,
+            "dayOfWeek": "[synthetic]",
+            "timezone": "[synthetic]",
+            "offset": "[synthetic]",
+            "utc": "[synthetic]"
+          }
+        }
+      },
+      "contract": {
+        "envelope": {
+          "type": "object",
+          "properties": {
+            "content": {
+              "type": "array",
+              "items": [
+                {
+                  "properties": {
+                    "text": {
+                      "type": "string"
+                    },
+                    "type": {
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                }
+              ]
+            },
+            "isError": {
+              "type": "boolean"
+            },
+            "structuredContent": {
+              "type": "object",
+              "properties": {}
+            }
+          }
+        },
+        "blocks": [
+          {
+            "representation": "markdown-json",
+            "shape": {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "type": "integer"
+                },
+                "data": {
+                  "type": "object",
+                  "properties": {
+                    "date": {
+                      "type": "string"
+                    },
+                    "datetime": {
+                      "type": "string"
+                    },
+                    "day": {
+                      "type": "integer"
+                    },
+                    "dayOfWeek": {
+                      "type": "string"
+                    },
+                    "formatted": {
+                      "type": "string"
+                    },
+                    "month": {
+                      "type": "integer"
+                    },
+                    "offset": {
+                      "type": "string"
+                    },
+                    "timestamp": {
+                      "type": "integer"
+                    },
+                    "timezone": {
+                      "type": "string"
+                    },
+                    "utc": {
+                      "type": "string"
+                    },
+                    "year": {
+                      "type": "integer"
+                    }
+                  }
+                },
+                "datetime": {
+                  "type": "string"
+                },
+                "message": {
+                  "type": "string"
+                },
+                "success": {
+                  "type": "boolean"
+                },
+                "traceId": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ],
+        "structured": {
+          "type": "object",
+          "properties": {
+            "code": {
+              "type": "integer"
+            },
+            "data": {
+              "type": "object",
+              "properties": {
+                "date": {
+                  "type": "string"
+                },
+                "datetime": {
+                  "type": "string"
+                },
+                "day": {
+                  "type": "integer"
+                },
+                "dayOfWeek": {
+                  "type": "string"
+                },
+                "formatted": {
+                  "type": "string"
+                },
+                "month": {
+                  "type": "integer"
+                },
+                "offset": {
+                  "type": "string"
+                },
+                "timestamp": {
+                  "type": "integer"
+                },
+                "timezone": {
+                  "type": "string"
+                },
+                "utc": {
+                  "type": "string"
+                },
+                "year": {
+                  "type": "integer"
+                }
+              }
+            },
+            "datetime": {
+              "type": "string"
+            },
+            "message": {
+              "type": "string"
+            },
+            "success": {
+              "type": "boolean"
+            },
+            "traceId": {
+              "type": "string"
+            }
+          }
+        },
+        "isError": false,
+        "redactedKeys": 0
+      }
+    }
+  ]
+}

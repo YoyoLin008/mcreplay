@@ -1,5 +1,9 @@
 # McReplay 验证记录
 
+## 官方 MCP 实测（2026-10-24）
+
+三项官方认证查询、完整结果接收、结构包导入和 SDK 回放全部通过。时间字段的本地类型变更实验按预期检出两处变化，CLI 退出 2。详细时间、响应格式及可运行样本见 [实测记录](LIVE_VERIFICATION.md)。
+
 ## macOS 接手与更名验证（2026-10-24）
 
 环境：macOS 15.2、Apple Silicon（arm64）、Python 3.13.3、MCP Python SDK 1.30.0。
@@ -58,7 +62,8 @@ CI 覆盖 macOS / Python 3.13 与 Linux / Python 3.11、3.12、3.13。
 | 验证项 | 状态 |
 |---|---|
 | 合成输入、本地 CLI 与 stdio 协议 | 已通过 |
-| 官方 MCP 认证查询及实际响应捕获 | 待完成 |
-| 官方 Streamable HTTP、当前参数定义及错误行为 | 待完成 |
+| 官方 MCP 认证查询及实际响应捕获 | 三项查询、接收和回放均通过 |
+| 官方 Streamable HTTP 与当前参数定义 | 已通过；三项均接受 `{}`，活动日历另有可选 `specifiedDate` |
+| 官方错误路径 | 本次未触发；本地错误路径由自动测试覆盖 |
 
 数据处理规则见 [本地数据管理](../SECURITY.md)，比较能力见 [支持范围](limitations.md)。

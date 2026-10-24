@@ -21,6 +21,7 @@ jobs:
       - run: ruff check .
       - run: ruff format --check .
       - run: pytest -q
+      - run: python examples/check_recorded_structure.py
       - run: python -m build
       - run: mcreplay demo --out-dir demo-output
       - name: Required files and unmodified declaration
