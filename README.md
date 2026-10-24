@@ -79,6 +79,8 @@ maireplay compare private/before.json private/after.json --html private/report.h
 
 将仓库的 `skills/maireplay/` 作为一个技能目录导入支持 `SKILL.md` 的客户端（目录位置按客户端文档设置）；[Skill 原文](skills/maireplay/SKILL.md) 可以审查。连接官方 MCP 及本地接收服务：
 
+先在项目目录运行 `mkdir -m 700 private`，再将下面的绝对路径替换为本机实际路径。接收服务要求父目录已存在，输出文件尚未存在。
+
 ```json
 {
   "mcpServers": {
