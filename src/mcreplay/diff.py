@@ -51,7 +51,7 @@ def _types(schema: dict[str, Any]) -> set[str]:
 def _schema(
     before: dict[str, Any], after: dict[str, Any], path: str, changes: list[Change]
 ) -> None:
-    if before.get("x-maireplay-limited") or after.get("x-maireplay-limited"):
+    if before.get("x-mcreplay-limited") or after.get("x-mcreplay-limited"):
         _add(
             changes,
             "review",

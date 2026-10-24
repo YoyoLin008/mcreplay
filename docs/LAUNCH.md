@@ -2,9 +2,9 @@
 
 ## 中文短公告
 
-做麦当劳 MCP 解析器时，一次能跑通的对话不容易变成安全的回归测试。我做了 MaiReplay（麦回放）：在正常客户端明确查询后，本地删除响应真实值，比较字段、类型和封装变化，再用标准 MCP 离线回放。演示无需 Token，样本全部标注为合成；目前尚未完成官方认证实测，回放只验证结构。
+做麦当劳 MCP 解析器时，一次能跑通的对话不容易变成安全的回归测试。我做了 McReplay（麦回放）：在正常客户端明确查询后，本地删除响应真实值，比较字段、类型和封装变化，再用标准 MCP 离线回放。演示无需 Token，样本全部标注为合成；目前尚未完成官方认证实测，回放只验证结构。
 
-仓库：https://github.com/YoyoLin008/maireplay
+仓库：https://github.com/YoyoLin008/mcreplay
 
 ## English GitHub description
 
@@ -13,9 +13,9 @@ Local structural fixtures, drift reports, and offline MCP replay for McDonald's 
 ## 90 秒演示脚本
 
 1. **0–15 秒：问题。** 展示适配器依赖整数 `timestamp` 字段的合成例子；说明类型变化可能让解析器失效。不要称它是官方真实字段。
-2. **15–35 秒：运行。** 执行 `maireplay demo --out-dir demo-output`；指出不需要 Token，也不访问官方服务。
+2. **15–35 秒：运行。** 执行 `mcreplay demo --out-dir demo-output`；指出不需要 Token，也不访问官方服务。
 3. **35–55 秒：定位。** 打开报告，展示活动字段移除、时间字段类型变化、非空文本变空及人工复核项；说明观察差异不等于完整契约证明。
-4. **55–75 秒：回放。** 将标准 MCP 客户端连接 `maireplay replay demo-output/before.json`，列出并调用已记录工具；展示合成占位值。
+4. **55–75 秒：回放。** 将标准 MCP 客户端连接 `mcreplay replay demo-output/before.json`，列出并调用已记录工具；展示合成占位值。
 5. **75–90 秒：真实使用边界。** 展示 Skill 的正常客户端查询→本地接收流程与凭证隔离；明确官方认证尚未实测，不演示虚构 live 成功。
 
 ## 可核实的技术差异

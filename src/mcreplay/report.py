@@ -43,15 +43,15 @@ def render_report(findings: list[dict], before: dict, after: dict) -> str:
     return f"""<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'">
-<title>MaiReplay · 本地结构比较</title><style>{CSS}</style></head><body><main>
-<div class="top"><div class="eyebrow">MAIREPLAY / LOCAL CONTRACT LAB</div>
+<title>McReplay · 本地结构比较</title><style>{CSS}</style></head><body><main>
+<div class="top"><div class="eyebrow">MCREPLAY / LOCAL CONTRACT LAB</div>
 <h1>接口在变，测试有据。</h1><span class="badge">{escape(source)} · 真实值已删除的结构样本</span>
 <p>工具、参数和响应结构的可解释比较。所有检查在本地运行，无需会员凭证。</p></div>
 <div class="metrics">{cards}</div>
 <table><thead><tr><th>级别</th><th>位置</th><th>发现</th></tr></thead><tbody>{rows}</tbody></table>
 <div class="notice">此报告比较有限观察样本，并非官方完整契约。合成回放不能验证金额、日期、
 库存或优惠资格。text 表示未解析文本，必须人工检查适配器行为。</div>
-<footer>MaiReplay 麦回放 · 非麦当劳官方产品 · 无远程资源、无埋点 · synthetic 表示合成演示</footer>
+<footer>McReplay 麦回放 · 非麦当劳官方产品 · 无远程资源、无埋点 · synthetic 表示合成演示</footer>
 </main></body></html>"""
 
 

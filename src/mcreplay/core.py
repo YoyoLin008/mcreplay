@@ -14,7 +14,7 @@ import stat
 from pathlib import Path
 from typing import Any
 
-FORMAT = "maireplay/v1"
+FORMAT = "mcreplay/v1"
 SAFE_TOOLS = frozenset({"now-time-info", "campaign-calendar", "list-nutrition-foods"})
 MAX_BYTES = 2 * 1024 * 1024
 MAX_DEPTH = 32
@@ -317,9 +317,9 @@ def _sanitize_schema(schema: Any) -> dict[str, Any]:
     structural = {"type", "properties", "required", "items", "additionalProperties"}
     descriptive = {"description", "title", "$schema", "$id", "$comment", "examples", "default"}
     if set(schema) - structural - descriptive:
-        result["x-maireplay-limited"] = True
-    if schema.get("x-maireplay-limited") is True:
-        result["x-maireplay-limited"] = True
+        result["x-mcreplay-limited"] = True
+    if schema.get("x-mcreplay-limited") is True:
+        result["x-mcreplay-limited"] = True
     return result
 
 

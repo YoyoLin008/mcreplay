@@ -5,9 +5,9 @@
       "url": "https://mcp.mcd.cn",
       "headers": {"Authorization": "Bearer ${MCD_MCP_TOKEN}"}
     },
-    "maireplay-capture": {
-      "command": "${MAIREPLAY_EXECUTABLE}",
-      "args": ["capture", "--out", "${MAIREPLAY_CAPTURE_PATH}"]
+    "mcreplay-capture": {
+      "command": "${MCREPLAY_EXECUTABLE}",
+      "args": ["capture", "--out", "${MCREPLAY_CAPTURE_PATH}"]
     }
   }
 }

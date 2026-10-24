@@ -57,7 +57,7 @@ Reliability grades: **A?** low complexity but untested; **B?** dynamic/user data
 ## Runtime-only tools reported by third parties (not adopted as documented capability)
 
 - `query-promotions`: S says required storeCode,orderType,beType; only enterprise catering beType=6; returns raw effective promotion rules. Issue16 supports presence. Must not assume personal order eligibility.
-- `query-survey-coupon`: S says required orderId; reads own order satisfaction questionnaire and related coupon redemption status. Official README doesn't describe it. Must inspect authorized runtime contract before any use. They are not used by MaiReplay.
+- `query-survey-coupon`: S says required orderId; reads own order satisfaction questionnaire and related coupon redemption status. Official README doesn't describe it. Must inspect authorized runtime contract before any use. They are not used by McReplay.
 
 ## Limits affecting product selection
 
@@ -66,13 +66,13 @@ Reliability grades: **A?** low complexity but untested; **B?** dynamic/user data
 - No general price optimizer guarantee: coupon compatibility, store/channel, missing choice pools and authoritative calculate-price are indispensable. This is crowded and contract-heavy.
 - Party/session planning is a real multi-tool workflow but already well represented by leading competition entries, and volatile stock would need fresh validation.
 - Read-only post-order review, privacy-safe receipt reconciliation and explainable partial evidence are underused relative to coupons and meal recommendations. Implementing narrowly scoped deterministic analysis can provide more utility than another conversational wrapper.
-- Without a token, validate local integration through standard SDK protocol tests and synthetic fixtures, label both explicitly, and do not claim official authentication succeeded. MaiReplay does not implement remote discovery or probes: the verified service rules restrict automated access. Normal-client explicitly requested queries may feed the local Skill workflow.
+- Without a token, validate local integration through standard SDK protocol tests and synthetic fixtures, label both explicitly, and do not claim official authentication succeeded. McReplay does not implement remote discovery or probes: the verified service rules restrict automated access. Normal-client explicitly requested queries may feed the local Skill workflow.
 
 ## Transport and security recommendations
 
 - Preserve official Streamable HTTP endpoint and bearer header; use a maintained official MCP SDK if dependencies/network permit. Endpoint must be fixed or tightly allowlisted to avoid token exfiltration.
 - Treat runtime tool list as data. Reject unknown tool names and all writes in a read-only product before transport invocation. Never use model-suggested arbitrary tool calls.
 - Inspect both protocol errors and business errors, empty content, structuredContent, text-encoded envelopes and possible non-JSON HTTP errors; do not print upstream bodies containing secrets or personal data.
-- In a separately authorized remote client, bounded retry policy would need to respect service rules and Retry-After. MaiReplay implements no remote transport or retry loop; normal-client errors stop the Skill workflow.
+- In a separately authorized remote client, bounded retry policy would need to respect service rules and Retry-After. McReplay implements no remote transport or retry loop; normal-client errors stop the Skill workflow.
 - Token via environment/secure local prompt only. No source/config/browser persistence. Raw account response should not enter public demos or logs. Redact/allowlist fields, do not rely solely on keyword redaction.
 - Noncommercial personal integration examples only per official repository §5; do not imply official endorsement or reuse official trademarks/assets as if licensed. License original code separately from official declaration and cited docs.

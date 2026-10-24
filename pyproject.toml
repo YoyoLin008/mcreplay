@@ -3,7 +3,7 @@ requires = ["hatchling>=1.27,<2"]
 build-backend = "hatchling.build"
 
 [project]
-name = "maireplay"
+name = "mcreplay"
 version = "0.1.0"
 description = "Local structural fixtures and offline MCP replay for McDonald's China Skill developers"
 readme = "README.md"
@@ -15,13 +15,13 @@ dependencies = ["mcp>=1.30,<2"]
 dev = ["pytest>=8,<10", "ruff>=0.11", "build>=1,<2"]
 
 [project.scripts]
-maireplay = "maireplay.cli:main"
+mcreplay = "mcreplay.cli:main"
 
 [project.urls]
-Repository = "https://github.com/YoyoLin008/maireplay"
+Repository = "https://github.com/YoyoLin008/mcreplay"
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/maireplay"]
+packages = ["src/mcreplay"]
 
 [tool.ruff]
 target-version = "py311"

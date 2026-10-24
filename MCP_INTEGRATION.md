@@ -1,6 +1,6 @@
 # 实际 MCP 集成
 
-MaiReplay 是“正常官方 MCP 查询 → 本地结构观察 → 离线回归”的 Skill 与可执行工具。它不是官方服务代理，不持有 Token，也不直接从脚本调用官方端点。
+McReplay 是“正常官方 MCP 查询 → 本地结构观察 → 离线回归”的 Skill 与可执行工具。它不是官方服务代理，不持有 Token，也不直接从脚本调用官方端点。
 
 ## 官方服务与认证
 
@@ -30,7 +30,7 @@ Token 申请需由用户在官方平台登录并接受服务条款。不要将�
 1. 用户在正常 AI 客户端中提出一次必要查询。Skill 检查工具名和当前参数定义。
 2. 客户端调用官方工具。若认证失败、限流、超时或服务不可用，停止；不循环重试、不自动降级成演示结果。
 3. 客户端把完整 MCP `CallToolResult` 传给本地 `record_mcd_observation(name, result)`。本地工具不会请求任何远端地址。
-4. 本地验证格式与限制，在内存中识别封装并删除真实标量值，写入 `maireplay/v1` 观察包。不会另存原始响应。
+4. 本地验证格式与限制，在内存中识别封装并删除真实标量值，写入 `mcreplay/v1` 观察包。不会另存原始响应。
 5. `compare` 比较观察结构；`replay` 用官方 MCP SDK 的 stdio 协议返回合成响应，供本地客户端测试。
 
 通过 `capture` 得到的输入 schema 仅表示首版接收的空参数，不是服务器正式 schema 导出。`import` 可附带用户合法导出的工具定义；仅保留支持的结构字段，未知约束不能据此证明兼容。
@@ -57,7 +57,7 @@ Token 申请需由用户在官方平台登录并接受服务条款。不要将�
 ```
 
 ```bash
-maireplay import private/export.json --out private/capture.json
+mcreplay import private/export.json --out private/capture.json
 ```
 
 导入来源标记为 `user-import`，它只表明导入方式，**不是服务器真实性证明**。仓库示例及 `demo` 标记为 `synthetic`。输入文件本身不会被删除，请单独安全保管。

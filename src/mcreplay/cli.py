@@ -13,7 +13,7 @@ from .report import render_report, write_report
 
 
 def _parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(description="MaiReplay 麦回放 · 本地结构样本与 MCP 回放")
+    parser = argparse.ArgumentParser(description="McReplay 麦回放 · 本地结构样本与 MCP 回放")
     parser.add_argument("--version", action="version", version=__version__)
     sub = parser.add_subparsers(dest="command", required=True)
     demo = sub.add_parser("demo", help="生成明确标记的合成演示")

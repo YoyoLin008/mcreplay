@@ -1,5 +1,5 @@
 {
-  "format": "maireplay/v1",
+  "format": "mcreplay/v1",
   "source": "synthetic",
   "tools": [
     {

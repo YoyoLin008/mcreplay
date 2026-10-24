@@ -13,8 +13,8 @@ from mcp import ClientSession
 from mcp.client.stdio import StdioServerParameters, stdio_client
 from mcp.types import CallToolRequest, CallToolRequestParams, ListToolsRequest
 
-from maireplay.core import atomic_write_json, build_bundle, load_bundle
-from maireplay.server import (
+from mcreplay.core import atomic_write_json, build_bundle, load_bundle
+from mcreplay.server import (
     CAPTURE_TOOL,
     create_capture_server,
     create_replay_server,
@@ -198,7 +198,7 @@ def test_sdk_stdio_replay_end_to_end(tmp_path):
     async def check():
         parameters = StdioServerParameters(
             command=sys.executable,
-            args=["-m", "maireplay", "replay", str(output)],
+            args=["-m", "mcreplay", "replay", str(output)],
             env={"PYTHONPATH": str(Path(__file__).resolve().parents[1] / "src")},
         )
         async with stdio_client(parameters) as (read, write):
@@ -224,7 +224,7 @@ def test_sdk_stdio_capture_end_to_end(tmp_path):
     async def check():
         parameters = StdioServerParameters(
             command=sys.executable,
-            args=["-m", "maireplay", "capture", "--out", str(output)],
+            args=["-m", "mcreplay", "capture", "--out", str(output)],
             env={"PYTHONPATH": str(Path(__file__).resolve().parents[1] / "src")},
         )
         async with stdio_client(parameters) as (read, write):

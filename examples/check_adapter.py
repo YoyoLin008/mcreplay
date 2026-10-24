@@ -16,7 +16,7 @@ from mcp.client.stdio import stdio_client
 
 async def check(bundle: str) -> bool:
     params = StdioServerParameters(
-        command=sys.executable, args=["-m", "maireplay", "replay", str(Path(bundle).resolve())]
+        command=sys.executable, args=["-m", "mcreplay", "replay", str(Path(bundle).resolve())]
     )
     async with stdio_client(params) as (read, write), ClientSession(read, write) as session:
         await session.initialize()

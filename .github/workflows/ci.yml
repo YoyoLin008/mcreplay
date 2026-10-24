@@ -4,10 +4,14 @@ permissions:
   contents: read
 jobs:
   verify:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
     strategy:
       matrix:
+        os: [ubuntu-latest]
         python: ['3.11', '3.12', '3.13']
+        include:
+          - os: macos-latest
+            python: '3.13'
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -18,6 +22,6 @@ jobs:
       - run: ruff format --check .
       - run: pytest -q
       - run: python -m build
-      - run: maireplay demo --out-dir demo-output
+      - run: mcreplay demo --out-dir demo-output
       - name: Required files and unmodified declaration
         run: python scripts/check_release.py

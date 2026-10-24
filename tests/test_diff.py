@@ -4,7 +4,7 @@ from copy import deepcopy
 
 import pytest
 
-from maireplay.diff import compare_bundles
+from mcreplay.diff import compare_bundles
 
 
 def shape(kind, **kwargs):
@@ -13,7 +13,7 @@ def shape(kind, **kwargs):
 
 def bundle(schema=None, output=None, representation="json", error=False):
     return {
-        "format": "maireplay/v1",
+        "format": "mcreplay/v1",
         "source": "synthetic",
         "tools": [{"name": "now-time-info", "inputSchema": schema or {"type": "object"}}],
         "observations": [
@@ -187,7 +187,7 @@ def test_unknown_constraint_changes_are_never_silently_certified():
 
 
 def test_omitted_schema_constraints_require_review_even_when_marker_unchanged():
-    a = bundle({"type": "object", "x-maireplay-limited": True})
+    a = bundle({"type": "object", "x-mcreplay-limited": True})
     assert severities(compare_bundles(a, deepcopy(a))) == {"review"}
 
 
@@ -206,7 +206,7 @@ def test_replaced_dynamic_keys_make_field_identity_uncertain():
 def test_reordered_redacted_keys_cannot_produce_false_breaking(use_text):
     import json
 
-    from maireplay.core import build_bundle
+    from mcreplay.core import build_bundle
 
     def observed(payload):
         response = {"content": []}

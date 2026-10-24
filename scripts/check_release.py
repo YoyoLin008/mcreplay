@@ -15,7 +15,7 @@ REQUIRED = (
     "mcp-config.example.json",
     "pyproject.toml",
     "LICENSE",
-    "skills/maireplay/SKILL.md",
+    "skills/mcreplay/SKILL.md",
 )
 
 

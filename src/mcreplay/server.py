@@ -43,7 +43,7 @@ def create_replay_server(bundle: dict[str, Any]) -> Server:
     frozen = copy.deepcopy(bundle)
     observations = {item["name"]: item for item in frozen["observations"]}
     server = Server(
-        "maireplay-structural-replay",
+        "mcreplay-structural-replay",
         version="0.1.0",
         instructions=(
             "OFFLINE STRUCTURAL FIXTURES ONLY. Values are synthetic and do not "
@@ -97,7 +97,7 @@ def create_capture_server(output: Path) -> Server:
     """
     output = Path(output)
     server = Server(
-        "maireplay-local-capture",
+        "mcreplay-local-capture",
         version="0.1.0",
         instructions=(
             "Local minimization sink. After one explicitly requested official "

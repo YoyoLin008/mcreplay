@@ -6,7 +6,7 @@ import os
 
 import pytest
 
-from maireplay.core import (
+from mcreplay.core import (
     MAX_BYTES,
     BundleError,
     atomic_write_json,
@@ -128,7 +128,7 @@ def test_schema_metadata_erasure_and_unknown_constraint_marker():
     actual = build_bundle([tool(schema)], [], "synthetic")
     assert "SECRET" not in json.dumps(actual)
     clean = actual["tools"][0]["inputSchema"]
-    assert clean["properties"]["date"] == {"type": "string", "x-maireplay-limited": True}
+    assert clean["properties"]["date"] == {"type": "string", "x-mcreplay-limited": True}
     assert clean["required"] == ["date"]
     validate_bundle(actual)
 

@@ -1,4 +1,4 @@
-# MaiReplay · 麦回放
+# McReplay · 麦回放
 
 **把一次麦当劳 MCP 查询变成可复现的本地结构测试。**
 
@@ -12,7 +12,7 @@
 
 “昨天能解析，今天为什么空了？”官方文档未提供完整机器可读 schema，公开反馈与参赛项目中又出现了 JSON、文本封装和空响应的差异。开发者通常只能反复登录重试，或把真实会员响应留在测试目录。
 
-MaiReplay 提供可检查的另一条路径：在正常 AI 客户端中明确触发必要查询 → 本地删除值 → 比较观察到的结构 → 将合成样本交给适配器回归测试。它不是套餐推荐器，也不执行领券或下单。
+McReplay 提供可检查的另一条路径：在正常 AI 客户端中明确触发必要查询 → 本地删除值 → 比较观察到的结构 → 将合成样本交给适配器回归测试。它不是套餐推荐器，也不执行领券或下单。
 
 - **结构观察包**：识别完整 JSON、代码围栏 JSON、`## Original Response` 后的 JSON，以及未解析文本与空文本。
 - **变化检测**：工具删除、必填参数增加、字段消失、类型和封装变化；区分 `breaking`、`review`、`info`。
@@ -24,21 +24,21 @@ MaiReplay 提供可检查的另一条路径：在正常 AI 客户端中明确触
 
 ## 30 秒离线试用
 
-需要 Python 3.11+，以下命令使用 Linux/macOS 风格终端；当前测试环境为 Linux。文件安全操作依赖 POSIX 接口，首版未验证 Windows 支持。源码安装，目前不宣称已发布到 PyPI。
+需要 Python 3.11+，以下命令使用 Linux/macOS 风格终端；已在 Linux 和 macOS 15.2（Apple Silicon、Python 3.13）执行测试。文件安全操作依赖 POSIX 接口，首版未验证 Windows 支持。源码安装，目前不宣称已发布到 PyPI。
 
 ```bash
-git clone https://github.com/YoyoLin008/maireplay.git
-cd maireplay
-python -m venv .venv
+git clone https://github.com/YoyoLin008/mcreplay.git
+cd mcreplay
+python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install -e .
-maireplay demo --out-dir demo-output
+mcreplay demo --out-dir demo-output
 ```
 
 打开 `demo-output/report.html`，查看刻意加入的结构变化。演示不会连接麦当劳，也不会读取 Token。输出目录必须是尚未存在的新目录。
 
 ```bash
-maireplay compare demo-output/before.json demo-output/after.json
+mcreplay compare demo-output/before.json demo-output/after.json
 # 该演示包含破坏性变化，因此 compare 预期退出码为 2。
 ```
 
@@ -51,9 +51,9 @@ maireplay compare demo-output/before.json demo-output/after.json
 ### 1. 修改解析器前，先比较样本
 
 ```bash
-maireplay import private/export-before.json --out private/before.json
-maireplay import private/export-after.json --out private/after.json
-maireplay compare private/before.json private/after.json --html private/report.html
+mcreplay import private/export-before.json --out private/before.json
+mcreplay import private/export-after.json --out private/after.json
+mcreplay compare private/before.json private/after.json --html private/report.html
 ```
 
 导入格式与字段含义见 [集成文档](MCP_INTEGRATION.md#本地导入格式)。原始导出文件由你保管，导入命令不会删除它。不要将 `private/` 提交到仓库；输出文件拒绝覆盖已有文件。
@@ -65,8 +65,8 @@ maireplay compare private/before.json private/after.json --html private/report.h
 ```json
 {
   "mcpServers": {
-    "maireplay-offline": {
-      "command": "/absolute/path/to/.venv/bin/maireplay",
+    "mcreplay-offline": {
+      "command": "/absolute/path/to/.venv/bin/mcreplay",
       "args": ["replay", "/absolute/path/to/demo-output/before.json"]
     }
   }
@@ -77,24 +77,24 @@ maireplay compare private/before.json private/after.json --html private/report.h
 
 ### 3. 在正常 AI 客户端中保存一次结构观察
 
-将仓库的 `skills/maireplay/` 作为一个技能目录导入支持 `SKILL.md` 的客户端（目录位置按客户端文档设置）；[Skill 原文](skills/maireplay/SKILL.md) 可以审查。连接官方 MCP 及本地接收服务：
+将仓库的 `skills/mcreplay/` 作为一个技能目录导入支持 `SKILL.md` 的客户端（目录位置按客户端文档设置）；[Skill 原文](skills/mcreplay/SKILL.md) 可以审查。连接官方 MCP 及本地接收服务：
 
 先在项目目录运行 `mkdir -m 700 private`，再将下面的绝对路径替换为本机实际路径。接收服务要求父目录已存在，输出文件尚未存在。
 
 ```json
 {
   "mcpServers": {
-    "maireplay-local": {
-      "command": "/absolute/path/to/.venv/bin/maireplay",
+    "mcreplay-local": {
+      "command": "/absolute/path/to/.venv/bin/mcreplay",
       "args": ["capture", "--out", "/absolute/path/to/private/observation.json"]
     }
   }
 }
 ```
 
-向客户端明确提出：“查询一次当前麦当劳活动，并用 MaiReplay 保存其结构供我本地测试。”Skill 只允许必要的一次官方只读查询，然后将完整 `CallToolResult` 交给本地 `record_mcd_observation`。一次接收服务只写一个新文件；需要新观察时配置新路径并重启。
+向客户端明确提出：“查询一次当前麦当劳活动，并用 McReplay 保存其结构供我本地测试。”Skill 只允许必要的一次官方只读查询，然后将完整 `CallToolResult` 交给本地 `record_mcd_observation`。一次接收服务只写一个新文件；需要新观察时配置新路径并重启。
 
-官方连接使用 `https://mcp.mcd.cn`、Streamable HTTP 和 Bearer Token。安全配置示例见 [mcp-config.example.json](mcp-config.example.json)；环境变量展开方式因客户端而异，须按客户端文档配置。不要把 Token 发到聊天、Issue 或 MaiReplay。
+官方连接使用 `https://mcp.mcd.cn`、Streamable HTTP 和 Bearer Token。安全配置示例见 [mcp-config.example.json](mcp-config.example.json)；环境变量展开方式因客户端而异，须按客户端文档配置。不要把 Token 发到聊天、Issue 或 McReplay。
 
 ## 架构
 
@@ -127,7 +127,7 @@ python -m build
 
 结构包记录的是**这次观察**，不是官方完整 schema。复杂 JSON Schema 约束会被保守处理；普通文本不能恢复业务结构；空数组无法证明元素类型。[完整限制](docs/limitations.md)
 
-MaiReplay 不接收 Token、不提供远端采集器、不做定时查询或真实服务 CI。官方 [服务规则](https://cdn.mcd.cn/cms/pages/MCPServerRules.html) 对自动化访问有限制；本项目采用正常客户端明确查询后的本地处理，不宣称获得任何规则豁免。
+McReplay 不接收 Token、不提供远端采集器、不做定时查询或真实服务 CI。官方 [服务规则](https://cdn.mcd.cn/cms/pages/MCPServerRules.html) 对自动化访问有限制；本项目采用正常客户端明确查询后的本地处理，不宣称获得任何规则豁免。
 
 值删除也不等于匿名化保证：英文字母/下划线键名会保留，嵌入其中的敏感信息仍可能泄露。分享前必须审查结构包；真实导出、个人观察包和报告默认只应保留本地。[安全说明](SECURITY.md)
 

@@ -1,11 +1,11 @@
 ---
-name: maireplay
+name: mcreplay
 description: 在用户明确要求保存麦当劳 MCP 查询结构用于本地开发测试时，接收一次必要的只读结果，删除真实值并生成可离线回放的观察包。
 ---
 
-# MaiReplay · 麦回放
+# McReplay · 麦回放
 
-用于维护麦当劳 MCP 解析器的个人开发场景。需要已安装的 MaiReplay、本地 `maireplay-local` MCP 连接，以及用户自行在正常客户端配置的官方 `mcd-mcp` 连接。安装方式与配置见仓库 README；本 Skill 不接受或处理任何 Token。
+用于维护麦当劳 MCP 解析器的个人开发场景。需要已安装的 McReplay、本地 `mcreplay-local` MCP 连接，以及用户自行在正常客户端配置的官方 `mcd-mcp` 连接。安装方式与配置见仓库 README；本 Skill 不接受或处理任何 Token。
 
 ## 触发
 
@@ -35,8 +35,8 @@ description: 在用户明确要求保存麦当劳 MCP 查询结构用于本地�
 在具有本地终端能力且用户已授权的环境中，可以运行：
 
 ```bash
-maireplay compare private/before.json private/after.json --html private/report.html
-maireplay replay private/before.json
+mcreplay compare private/before.json private/after.json --html private/report.html
+mcreplay replay private/before.json
 ```
 
 这些命令仅处理本地包。回放内容是合成占位符，不能验证金额、日期、营养值、库存、优惠资格或下单正确性。未经用户明确同意，不将结构包或报告发布到外部平台。

@@ -2,10 +2,10 @@ import json
 
 import pytest
 
-from maireplay.cli import main
-from maireplay.core import atomic_write_json, build_bundle
-from maireplay.demo import demo_bundles
-from maireplay.report import render_report
+from mcreplay.cli import main
+from mcreplay.core import atomic_write_json, build_bundle
+from mcreplay.demo import demo_bundles
+from mcreplay.report import render_report
 
 
 def test_demo_complete_journey_and_breaking_exit(tmp_path, capsys):
